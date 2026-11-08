@@ -1,0 +1,3154 @@
+[
+    {
+        "id": 1,
+        "input": "The Atlas project uses PostgreSQL as its database.",
+        "category": "independent",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "Atlas project",
+            "predicate": "uses_database_engine",
+            "object_value": "PostgreSQL",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns Atlas project using PostgreSQL, while memory_0 concerns MemoryMesh project using SQLite; different subjects and database engines."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "UNRELATED",
+                    "reason": "The predicates differ (uses_database_engine vs uses_language) and subjects differ (Atlas project vs production backend)."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate (uses_database_engine vs uses_graph_visualization_library) and subject (Atlas project vs graph visualization)."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate (uses_database_engine vs uses_server) and subject (Atlas project vs development server)."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate (uses_database_engine vs uses_framework) and subject (Atlas project vs API)."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+            "subject": "Atlas project",
+            "predicate": "uses_database_engine",
+            "object_value": "PostgreSQL",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:02:44.459325Z"
+        }
+    },
+    {
+        "id": 2,
+        "input": "The Nova application uses Redis for caching.",
+        "category": "independent",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "Nova application",
+            "predicate": "uses_cache_engine",
+            "object_value": "Redis",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object, and context differ from the new memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+            "subject": "Nova application",
+            "predicate": "uses_cache_engine",
+            "object_value": "Redis",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:02:47.972863Z"
+        }
+    },
+    {
+        "id": 3,
+        "input": "The Orion API is built with FastAPI.",
+        "category": "independent",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "Orion API",
+            "predicate": "uses_framework",
+            "object_value": "FastAPI",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory refers to Orion API with no context, while the existing memory refers to a generic API within the MemoryMesh project. They are distinct scopes, so they can coexist."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Subjects, predicates, and objects differ, so there is no meaningful relationship."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Subjects, predicates, and objects differ, so there is no meaningful relationship."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Subjects, predicates, and objects differ, so there is no meaningful relationship."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "UNRELATED",
+                    "reason": "Subjects, predicates, and objects differ, so there is no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+            "subject": "Orion API",
+            "predicate": "uses_framework",
+            "object_value": "FastAPI",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:02:52.328901Z"
+        }
+    },
+    {
+        "id": 4,
+        "input": "The Phoenix frontend uses React.",
+        "category": "independent",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "frontend",
+            "predicate": "uses_framework",
+            "object_value": "React",
+            "context": "Phoenix",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a8f8d0b8-2a47-49fa-bdad-789b08e6f5d2",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the same subject (frontend) but use different predicates (uses_language vs uses_framework), so they can coexist as separate facts."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The subject, predicate, and context differ entirely, indicating no meaningful relationship."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and object; no overlap with the new memory."
+                },
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and object; no overlap with the new memory."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and object; no overlap with the new memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+            "subject": "frontend",
+            "predicate": "uses_framework",
+            "object_value": "React",
+            "context": "Phoenix",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:03:07.954423Z"
+        }
+    },
+    {
+        "id": 5,
+        "input": "The Mercury project uses FAISS for vector search.",
+        "category": "independent",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "Mercury project",
+            "predicate": "uses_vector_search_engine",
+            "object_value": "FAISS",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+            "subject": "Mercury project",
+            "predicate": "uses_vector_search_engine",
+            "object_value": "FAISS",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:03:19.345099Z"
+        }
+    },
+    {
+        "id": 6,
+        "input": "The Atlas project uses PostgreSQL as its database.",
+        "category": "duplicate",
+        "expected": "DUPLICATE",
+        "success": true,
+        "extraction": {
+            "subject": "Atlas project",
+            "predicate": "uses_database_engine",
+            "object_value": "PostgreSQL",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "DUPLICATE",
+                    "reason": "Same subject, predicate, object_value, and context; identical factual statement."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; refers to a different project; no overlap."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate and subject; distinct fact."
+                },
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; distinct fact."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; distinct fact."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 7,
+        "input": "PostgreSQL is the database used by Atlas.",
+        "category": "duplicate",
+        "expected": "DUPLICATE",
+        "success": true,
+        "extraction": {
+            "subject": "database",
+            "predicate": "used_by",
+            "object_value": "PostgreSQL",
+            "context": "Atlas",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "DUPLICATE",
+                    "reason": "Both memories describe that the Atlas project uses PostgreSQL; the new memory rephrases the same fact with context 'Atlas'."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns the Atlas project and PostgreSQL, while this memory is about MemoryMesh project using SQLite."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about a database used by PostgreSQL in Atlas, whereas this memory is about graph visualization using Cytoscape.js in MemoryMesh."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns PostgreSQL usage in Atlas, while this memory is about Nova application using Redis cache."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about PostgreSQL usage in Atlas, whereas this memory is about production backend using Python 3.15."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 8,
+        "input": "The Nova application uses Redis for caching.",
+        "category": "duplicate",
+        "expected": "DUPLICATE",
+        "success": true,
+        "extraction": {
+            "subject": "Nova application",
+            "predicate": "uses_cache_engine",
+            "object_value": "Redis",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "DUPLICATE",
+                    "reason": "The new memory has identical subject, predicate, object_value, and context as the existing memory."
+                },
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory refers to a different subject, predicate, object_value, and context than the existing memory."
+                },
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory refers to a different subject, predicate, object_value, and context than the existing memory."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory refers to a different subject, predicate, object_value, and context than the existing memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory refers to a different subject, predicate, object_value, and context than the existing memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 9,
+        "input": "The Orion API is developed using FastAPI.",
+        "category": "duplicate",
+        "expected": "DUPLICATE",
+        "success": true,
+        "extraction": {
+            "subject": "Orion API",
+            "predicate": "uses_framework",
+            "object_value": "FastAPI",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "DUPLICATE",
+                    "reason": "The new memory and existing memory_0 have identical subject, predicate, object_value, and context."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory refers to subject \"Orion API\" while memory_1 refers to a generic \"API\" with a different context; the subjects and contexts differ, so the facts are unrelated."
+                },
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns \"Orion API\" using FastAPI, whereas memory_2 concerns a frontend using React; both subject and object_value differ."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about a framework used by Orion API, while memory_3 is about a cache engine used by Nova application; subject and predicate differ."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about a framework used by Orion API, whereas memory_4 is about programming languages used in source code; subject and predicate differ."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 10,
+        "input": "React is used by the Phoenix frontend.",
+        "category": "duplicate",
+        "expected": "DUPLICATE",
+        "success": true,
+        "extraction": {
+            "subject": "Phoenix frontend",
+            "predicate": "uses_library",
+            "object_value": "React",
+            "context": "Phoenix",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "DUPLICATE",
+                    "reason": "Both memories state that the Phoenix frontend uses React; the predicate wording differs but the factual content is identical."
+                },
+                {
+                    "memory_id": "a8f8d0b8-2a47-49fa-bdad-789b08e6f5d2",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory refers to the Phoenix frontend in the Phoenix context, while memory_1 refers to a generic frontend in the MemoryMesh project context; they are distinct scopes and can both be true."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Memory_2 concerns a Nova application’s cache engine, unrelated to the Phoenix frontend’s library usage."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Memory_3 describes source code languages for the MemoryMesh project, not the Phoenix frontend."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Memory_4 is about the MemoryMesh project’s database engine, unrelated to the Phoenix frontend’s library usage."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 11,
+        "input": "The Atlas project now uses MySQL instead of PostgreSQL.",
+        "category": "supersession",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "Atlas project",
+            "predicate": "uses_database_engine",
+            "object_value": "MySQL",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to Atlas project using a database engine, but specify different engines (PostgreSQL vs MySQL), which contradicts the factual information."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects (Atlas project vs MemoryMesh project) and predicates, so they are unrelated."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects, predicates, and contexts, so they are unrelated."
+                },
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects and predicates, so they are unrelated."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects, predicates, and contexts, so they are unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+            "subject": "Atlas project",
+            "predicate": "uses_database_engine",
+            "object_value": "MySQL",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:05:04.611247Z"
+        }
+    },
+    {
+        "id": 12,
+        "input": "The Nova application has switched from Redis to Memcached.",
+        "category": "supersession",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "Nova application",
+            "predicate": "uses_cache_engine",
+            "object_value": "Memcached",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to Nova application using cache engine but specify different engines (Memcached vs Redis), indicating contradictory information."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+            "subject": "Nova application",
+            "predicate": "uses_cache_engine",
+            "object_value": "Memcached",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:05:27.746610Z"
+        }
+    },
+    {
+        "id": 13,
+        "input": "The Orion API now uses Django instead of FastAPI.",
+        "category": "supersession",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "Orion API",
+            "predicate": "uses_web_framework",
+            "object_value": "Django",
+            "context": "Orion project",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to Orion API and its web framework, but they state different frameworks (Django vs FastAPI). The new memory provides a more specific context ('Orion project'), while the existing memory lacks context, leading to contradictory information about the framework used."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "The subject is generic 'API' versus 'Orion API', so they refer to different entities; no overlap."
+                },
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject 'frontend' vs 'Orion API'; unrelated."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject 'development server' vs 'Orion API'; unrelated."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject 'source code' vs 'Orion API'; unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "3a851ab5-2ef7-41d4-b589-8bc9c7c6817c",
+            "subject": "Orion API",
+            "predicate": "uses_web_framework",
+            "object_value": "Django",
+            "context": "Orion project",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:05:45.978020Z"
+        }
+    },
+    {
+        "id": 14,
+        "input": "The Phoenix frontend has migrated from React to Vue.",
+        "category": "supersession",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "frontend",
+            "predicate": "uses_framework",
+            "object_value": "Vue",
+            "context": "Phoenix project",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to the same subject, predicate, and context (frontend uses_framework in Phoenix project). The object values differ (Vue vs React), indicating contradictory information."
+                },
+                {
+                    "memory_id": "3a851ab5-2ef7-41d4-b589-8bc9c7c6817c",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "No meaningful relationship between the new memory and the existing memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+            "subject": "frontend",
+            "predicate": "uses_framework",
+            "object_value": "Vue",
+            "context": "Phoenix project",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:06:09.843573Z"
+        }
+    },
+    {
+        "id": 15,
+        "input": "The Mercury project now uses Qdrant instead of FAISS.",
+        "category": "supersession",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "Mercury project",
+            "predicate": "uses_vector_search_engine",
+            "object_value": "Qdrant",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "relationship": "SUPERSEDE",
+                    "reason": "The new memory indicates that the Mercury project now uses Qdrant as its vector search engine, replacing the previously recorded FAISS."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the Nova application and its cache engine, which is unrelated to the Mercury project and vector search engine."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the Nova application and its cache engine, which is unrelated to the Mercury project and vector search engine."
+                },
+                {
+                    "memory_id": "9f2a4fff-271f-499d-949d-27b402f6063c",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns graph visualization and a different context, unrelated to the Mercury project and vector search engine."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the Atlas project and its database engine, unrelated to the Mercury project and vector search engine."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": [
+                {
+                    "memory_id": "2157e153-5c2f-48b7-bd47-2ac5203f16ee",
+                    "status": "SUPERSEDED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "957e467e-8fe7-487d-b9bc-ac2c30e4f4e3",
+            "subject": "Mercury project",
+            "predicate": "uses_vector_search_engine",
+            "object_value": "Qdrant",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:06:34.087426Z"
+        }
+    },
+    {
+        "id": 16,
+        "input": "The production backend uses Python 3.12.",
+        "category": "context",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.12",
+            "context": "production environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to the backend in production, but the new memory states it uses Python 3.12 while the existing memory states Python 3.15, indicating contradictory information about the same scope."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories describe the same backend using Python 3.12, but they apply to different contexts (MemoryMesh project vs production environment), so they can coexist."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "The subject is source code, which is unrelated to the backend subject of the new memory."
+                },
+                {
+                    "memory_id": "a8f8d0b8-2a47-49fa-bdad-789b08e6f5d2",
+                    "relationship": "UNRELATED",
+                    "reason": "The subject is frontend, which is unrelated to the backend subject of the new memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The predicate is uses_server, not uses_language, and the subject is development server, so it is unrelated to the new memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.12",
+            "context": "production environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:06:47.767820Z"
+        }
+    },
+    {
+        "id": 17,
+        "input": "The development backend uses Python 3.13.",
+        "category": "context",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.13",
+            "context": "development environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory refers to the backend in a development environment, while the existing memory refers to the backend in a production environment; different contexts allow both to be true."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "COEXIST",
+                    "reason": "The existing memory concerns a production backend with no specified context, whereas the new memory concerns a backend in a development environment; distinct contexts and object values permit coexistence."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the backend but in different contexts (development environment vs MemoryMesh project); they can coexist."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "The subject differs (source code vs backend), so the memories are unrelated."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The predicate differs (uses_server vs uses_language), making the memories unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "9f7eec70-0def-4a52-8295-4fce2342764c",
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.13",
+            "context": "development environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:07:02.732306Z"
+        }
+    },
+    {
+        "id": 18,
+        "input": "The testing backend uses Python 3.14.",
+        "category": "context",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.14",
+            "context": "testing environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "9f7eec70-0def-4a52-8295-4fce2342764c",
+                    "relationship": "COEXIST",
+                    "reason": "Different environment context; both can be true simultaneously."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "COEXIST",
+                    "reason": "Different environment context; both can be true simultaneously."
+                },
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "COEXIST",
+                    "reason": "Different subject scope (production backend vs backend) and no context; both can be true simultaneously."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "COEXIST",
+                    "reason": "Different context; both can be true simultaneously."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.14",
+            "context": "testing environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:07:21.061502Z"
+        }
+    },
+    {
+        "id": 19,
+        "input": "The production backend now uses Python 3.15.",
+        "category": "context",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.15",
+            "context": "production environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "relationship": "SUPERSEDE",
+                    "reason": "New memory provides specific context 'production environment' for the same subject and predicate, replacing the older unresolved memory."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to backend in production environment but claim different Python versions, contradicting each other."
+                },
+                {
+                    "memory_id": "9f7eec70-0def-4a52-8295-4fce2342764c",
+                    "relationship": "COEXIST",
+                    "reason": "Different contexts (production vs development) allow both to be true."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "COEXIST",
+                    "reason": "Different contexts (production vs testing) allow both to be true."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "COEXIST",
+                    "reason": "Different contexts (production vs MemoryMesh project) allow both to be true."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "b62053d5-f75d-4844-a0c0-3425c4558aac",
+                    "status": "SUPERSEDED"
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.15",
+            "context": "production environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:07:32.265772Z"
+        }
+    },
+    {
+        "id": 20,
+        "input": "The development backend now uses Python 3.14.",
+        "category": "context",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.14",
+            "context": "development environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "9f7eec70-0def-4a52-8295-4fce2342764c",
+                    "relationship": "SUPERSEDE",
+                    "reason": "New memory updates the language version for the development environment from 3.13 to 3.14, replacing the older entry."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "COEXIST",
+                    "reason": "Different environment (production vs development); both can be true simultaneously."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "COEXIST",
+                    "reason": "Different environment; both can coexist."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "COEXIST",
+                    "reason": "Different environment; both can coexist."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "COEXIST",
+                    "reason": "Different context; both can coexist."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": [
+                {
+                    "memory_id": "9f7eec70-0def-4a52-8295-4fce2342764c",
+                    "status": "SUPERSEDED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+            "subject": "backend",
+            "predicate": "uses_language",
+            "object_value": "Python 3.14",
+            "context": "development environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:07:58.223398Z"
+        }
+    },
+    {
+        "id": 21,
+        "input": "The billing service uses Stripe for payments.",
+        "category": "conflict",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "billing service",
+            "predicate": "uses_payment_processor",
+            "object_value": "Stripe",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns the billing service and its payment processor, while the existing memory refers to the Nova application and its cache engine; there is no overlap in subject, predicate, or context."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about the billing service using Stripe, whereas the existing memory is about the Nova application using a cache engine; subjects and predicates differ."
+                },
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory deals with the billing service and payment processor, while the existing memory concerns the Orion API and its framework; no shared elements."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory references the billing service and Stripe, whereas the existing memory references the Atlas project and its database engine; distinct contexts."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about the billing service and Stripe, while the existing memory is about a backend using Python 3.12 in production; subjects and predicates are unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+            "subject": "billing service",
+            "predicate": "uses_payment_processor",
+            "object_value": "Stripe",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:08:22.471334Z"
+        }
+    },
+    {
+        "id": 22,
+        "input": "The billing service uses Razorpay for payments.",
+        "category": "conflict",
+        "expected": "CONFLICT",
+        "success": true,
+        "extraction": {
+            "subject": "billing service",
+            "predicate": "uses_payment_gateway",
+            "object_value": "Razorpay",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "CONFLICT",
+                    "reason": "Both memories refer to the billing service’s payment processing, but specify different processors (Stripe vs Razorpay). The new memory provides a different value, indicating a conflict."
+                },
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects (billing service vs frontend) and contexts, so they are unrelated."
+                },
+                {
+                    "memory_id": "3a851ab5-2ef7-41d4-b589-8bc9c7c6817c",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects (billing service vs Orion API) and contexts, so they are unrelated."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects (billing service vs development server) and contexts, so they are unrelated."
+                },
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "UNRELATED",
+                    "reason": "The memories refer to different subjects (billing service vs Orion API) and contexts, so they are unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+            "subject": "billing service",
+            "predicate": "uses_payment_gateway",
+            "object_value": "Razorpay",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:08:40.489994Z"
+        }
+    },
+    {
+        "id": 23,
+        "input": "The notification service uses SendGrid for email.",
+        "category": "conflict",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "notification service",
+            "predicate": "uses_email_service",
+            "object_value": "SendGrid",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, object, and context."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+            "subject": "notification service",
+            "predicate": "uses_email_service",
+            "object_value": "SendGrid",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:08:56.408587Z"
+        }
+    },
+    {
+        "id": 24,
+        "input": "The notification service uses Amazon SES for email.",
+        "category": "conflict",
+        "expected": "CONFLICT",
+        "success": true,
+        "extraction": {
+            "subject": "notification service",
+            "predicate": "uses_email_service",
+            "object_value": "Amazon SES",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+                    "relationship": "CONFLICT",
+                    "reason": "Same subject, predicate, and context but different object_value, indicating conflicting information about the email service used by the notification service."
+                },
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                },
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+            "subject": "notification service",
+            "predicate": "uses_email_service",
+            "object_value": "Amazon SES",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:09:09.999141Z"
+        }
+    },
+    {
+        "id": 25,
+        "input": "The search service uses Elasticsearch for indexing.",
+        "category": "conflict",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "search service",
+            "predicate": "uses_indexing_engine",
+            "object_value": "Elasticsearch",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "957e467e-8fe7-487d-b9bc-ac2c30e4f4e3",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value differ from the new memory; no overlap."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value differ from the new memory; no overlap."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value differ from the new memory; no overlap."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value differ from the new memory; no overlap."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value differ from the new memory; no overlap."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+            "subject": "search service",
+            "predicate": "uses_indexing_engine",
+            "object_value": "Elasticsearch",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:09:30.247115Z"
+        }
+    },
+    {
+        "id": 26,
+        "input": "The mobile application supports dark mode.",
+        "category": "unrelated",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "mobile application",
+            "predicate": "supports_dark_mode",
+            "object_value": "dark mode",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a mobile application supporting dark mode, while memory_0 is about Nova application using a cache engine."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about dark mode support, whereas memory_1 describes Nova application using Memcached."
+                },
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory deals with mobile application dark mode, while memory_2 is about a frontend using Vue framework."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about dark mode support, whereas memory_3 concerns a development server using Uvicorn."
+                },
+                {
+                    "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about dark mode support, while memory_4 is about a notification service using SendGrid."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "83fa8515-c356-4ad9-8e54-eefa8fa2c2ac",
+            "subject": "mobile application",
+            "predicate": "supports_dark_mode",
+            "object_value": "dark mode",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:09:47.694654Z"
+        }
+    },
+    {
+        "id": 27,
+        "input": "The analytics service generates weekly reports.",
+        "category": "unrelated",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "analytics service",
+            "predicate": "generates_weekly_reports",
+            "object_value": "weekly reports",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns an analytics service generating weekly reports, while the existing memory is about a search service using Elasticsearch; no overlapping subject, predicate, or context."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about an analytics service generating weekly reports, whereas the existing memory refers to a notification service using Amazon SES; subjects and predicates differ."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory involves an analytics service generating weekly reports, while the existing memory is about an Atlas project using MySQL; no shared subject or predicate."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns an analytics service generating weekly reports, whereas the existing memory is about an Atlas project using PostgreSQL; subjects and predicates differ."
+                },
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about an analytics service generating weekly reports, while the existing memory refers to a billing service using Stripe; no overlap in subject or predicate."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "1faf2e71-c055-4c76-850f-bb3451d03f13",
+            "subject": "analytics service",
+            "predicate": "generates_weekly_reports",
+            "object_value": "weekly reports",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:10:04.350963Z"
+        }
+    },
+    {
+        "id": 28,
+        "input": "The authentication service supports OAuth 2.0.",
+        "category": "unrelated",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "authentication service",
+            "predicate": "supports_oauth2",
+            "object_value": "OAuth 2.0",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object_value; no overlap with authentication service supports_oauth2."
+                },
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object_value; no overlap with authentication service supports_oauth2."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object_value; no overlap with authentication service supports_oauth2."
+                },
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object_value; no overlap with authentication service supports_oauth2."
+                },
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object_value; no overlap with authentication service supports_oauth2."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "2ee45c0d-d9c9-482f-a55b-384d7c880a20",
+            "subject": "authentication service",
+            "predicate": "supports_oauth2",
+            "object_value": "OAuth 2.0",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:10:25.464545Z"
+        }
+    },
+    {
+        "id": 29,
+        "input": "The documentation website uses Markdown.",
+        "category": "unrelated",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "documentation website",
+            "predicate": "uses_markup_language",
+            "object_value": "Markdown",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a documentation website using Markdown, while the existing memory concerns the backend using Python 3.12 in a production environment, which are unrelated subjects."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a documentation website using Markdown, while the existing memory concerns the backend using Python 3.15 in a production environment, which are unrelated subjects."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a documentation website using Markdown, while the existing memory concerns the backend using Python 3.14 in a development environment, which are unrelated subjects."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a documentation website using Markdown, while the existing memory concerns the backend using Python 3.14 in a testing environment, which are unrelated subjects."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a documentation website using Markdown, while the existing memory concerns source code using Python and TypeScript in the MemoryMesh project, which are unrelated subjects."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "99589431-677c-4afa-89eb-b65a7efe0e3c",
+            "subject": "documentation website",
+            "predicate": "uses_markup_language",
+            "object_value": "Markdown",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:10:39.490181Z"
+        }
+    },
+    {
+        "id": 30,
+        "input": "The deployment pipeline runs automated tests.",
+        "category": "unrelated",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "deployment pipeline",
+            "predicate": "runs_automated_tests",
+            "object_value": "automated tests",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object_value, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object_value, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object_value, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object_value, and context differ from the new memory."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, object_value, and context differ from the new memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "32b520c8-ac49-4a13-a2fe-853b6faedaf9",
+            "subject": "deployment pipeline",
+            "predicate": "runs_automated_tests",
+            "object_value": "automated tests",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:10:59.626548Z"
+        }
+    },
+    {
+        "id": 31,
+        "input": "The analytics service started using Python 3.12 on October 10, 2026.",
+        "category": "temporal",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "analytics service",
+            "predicate": "uses_language",
+            "object_value": "Python 3.12",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": "2026-10-10T00:00:00Z",
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs: 'analytics service' vs 'backend'."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs: 'analytics service' vs 'backend'."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs: 'analytics service' vs 'backend'."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs: 'analytics service' vs 'backend'."
+                },
+                {
+                    "memory_id": "a4ef4d84-3bd1-48b9-8192-ca9167a48a25",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs: 'analytics service' vs 'backend'."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+            "subject": "analytics service",
+            "predicate": "uses_language",
+            "object_value": "Python 3.12",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": "2026-10-10T00:00:00Z",
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:11:11.923197Z"
+        }
+    },
+    {
+        "id": 32,
+        "input": "The Orion API migrated to Django on October 20, 2026.",
+        "category": "temporal",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "Orion API",
+            "predicate": "migrated_to",
+            "object_value": "Django",
+            "context": "Orion project",
+            "confidence": 1.0,
+            "valid_from": "2026-10-20T00:00:00Z",
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "3a851ab5-2ef7-41d4-b589-8bc9c7c6817c",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories can be true simultaneously: the new memory indicates Orion API migrated to Django, which implies it uses Django, while the existing memory states it uses Django. The new memory provides additional detail without negating the existing fact."
+                },
+                {
+                    "memory_id": "88decbef-675e-40af-bacc-52e1e485fcf5",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory states Orion API migrated to Django, which does not contradict the existing memory that it uses FastAPI; it may have used FastAPI before migration. Both facts can coexist."
+                },
+                {
+                    "memory_id": "90496cf1-d17a-4309-a41d-dfe272a1adbb",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (API vs Orion API) and different context (MemoryMesh project vs Orion project). No meaningful relationship."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (Atlas project vs Orion API). No meaningful relationship."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (backend vs Orion API). No meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "95d1522e-1cfd-4f88-83b9-c8b1716da0da",
+            "subject": "Orion API",
+            "predicate": "migrated_to",
+            "object_value": "Django",
+            "context": "Orion project",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": "2026-10-20T00:00:00Z",
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:11:18.111962Z"
+        }
+    },
+    {
+        "id": 33,
+        "input": "The Phoenix frontend migrated to Vue on November 1, 2026.",
+        "category": "temporal",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "frontend",
+            "predicate": "migrated_to",
+            "object_value": "Vue",
+            "context": "Phoenix project",
+            "confidence": 1.0,
+            "valid_from": "2026-11-01T00:00:00Z",
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "COEXIST",
+                    "reason": "Different predicate; new memory indicates migration to Vue, existing indicates usage of Vue; they refer to distinct aspects and can coexist."
+                },
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "CONFLICT",
+                    "reason": "New memory indicates migration to Vue in Phoenix project, conflicting with existing claim that frontend uses React in same context; unclear if migration replaces usage, so conflict."
+                },
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (frontend vs Nova application); no meaningful relationship."
+                },
+                {
+                    "memory_id": "95d1522e-1cfd-4f88-83b9-c8b1716da0da",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (frontend vs Orion API); no meaningful relationship."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (frontend vs Nova application); no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "52f903d4-3921-41e3-a13f-caa97b37d832",
+            "subject": "frontend",
+            "predicate": "migrated_to",
+            "object_value": "Vue",
+            "context": "Phoenix project",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": "2026-11-01T00:00:00Z",
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:11:44.965298Z"
+        }
+    },
+    {
+        "id": 34,
+        "input": "The Nova application stopped using Redis on October 15, 2026.",
+        "category": "temporal",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "Nova application",
+            "predicate": "stopped_using_redis",
+            "object_value": "Redis",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": "2026-10-15T00:00:00Z"
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "relationship": "SUPERSEDE",
+                    "reason": "The new memory states that the Nova application stopped using Redis, which replaces the earlier claim that it uses Redis as a cache engine."
+                },
+                {
+                    "memory_id": "3b1b7505-06af-49d8-9bee-f9dda10a88bd",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory concerns Redis usage, while the existing memory concerns Memcached usage; both can be true simultaneously."
+                },
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subjects (Nova application vs frontend) and unrelated predicates."
+                },
+                {
+                    "memory_id": "52f903d4-3921-41e3-a13f-caa97b37d832",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subjects (Nova application vs frontend) and unrelated predicates."
+                },
+                {
+                    "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subjects (Nova application vs search service) and unrelated predicates."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": [
+                {
+                    "memory_id": "a5b78099-77f9-414f-8670-edcb6994b492",
+                    "status": "SUPERSEDED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "eb90d4cd-3a91-4f2c-aad9-6e62e363c005",
+            "subject": "Nova application",
+            "predicate": "stopped_using_redis",
+            "object_value": "Redis",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": "2026-10-15T00:00:00Z",
+            "recorded_at": "2026-11-07T17:12:05.812367Z"
+        }
+    },
+    {
+        "id": 35,
+        "input": "The billing service adopted Stripe on September 1, 2026.",
+        "category": "temporal",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "billing service",
+            "predicate": "uses_payment_processor",
+            "object_value": "Stripe",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": "2026-09-01T00:00:00Z",
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "DUPLICATE",
+                    "reason": "Same subject, predicate, object_value, and context; identical factual content."
+                },
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate; refers to a different property of billing service."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; refers to notification service."
+                },
+                {
+                    "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; refers to analytics service."
+                },
+                {
+                    "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; refers to notification service."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": false,
+            "candidate_status": null,
+            "updates": []
+        },
+        "saved_memory": null
+    },
+    {
+        "id": 36,
+        "input": "The backend might move to Go in the future.",
+        "category": "ambiguous",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "backend",
+            "predicate": "potentially_moves_to_language",
+            "object_value": "Go",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory has a different predicate (potentially_moves_to_language) than the existing memory (uses_language), indicating a potential future change rather than a contradiction or replacement."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "COEXIST",
+                    "reason": "Different predicate; new memory indicates potential future language, existing indicates current usage."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "COEXIST",
+                    "reason": "Different predicate; new memory indicates potential future language, existing indicates current usage in development environment."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "COEXIST",
+                    "reason": "Different predicate; new memory indicates potential future language, existing indicates current usage in testing environment."
+                },
+                {
+                    "memory_id": "a8f8d0b8-2a47-49fa-bdad-789b08e6f5d2",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns the backend, while the existing memory concerns the frontend; they refer to different subjects."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "0f78c32e-2b74-4f1d-aa61-0967812b07bc",
+            "subject": "backend",
+            "predicate": "potentially_moves_to_language",
+            "object_value": "Go",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:12:40.146744Z"
+        }
+    },
+    {
+        "id": 37,
+        "input": "The database may be replaced with MongoDB.",
+        "category": "ambiguous",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "database",
+            "predicate": "replacement_candidate",
+            "object_value": "MongoDB",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory’s subject is generic 'database', whereas the existing memory refers to the specific 'Atlas project'; no shared context or scope."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subjects: 'database' vs 'Atlas project'; no overlapping context."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject mismatch: 'database' vs 'MemoryMesh project'; no shared context."
+                },
+                {
+                    "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject mismatch: 'database' vs 'search service'; no shared context."
+                },
+                {
+                    "memory_id": "b258901d-2273-43e4-acbe-fac25d18b092",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject mismatch: 'database' vs 'MemoryMesh project'; no shared context."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "6f11f194-1540-440a-a8f4-dd07f056e960",
+            "subject": "database",
+            "predicate": "replacement_candidate",
+            "object_value": "MongoDB",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:12:56.006748Z"
+        }
+    },
+    {
+        "id": 38,
+        "input": "The team is considering switching to Kubernetes.",
+        "category": "ambiguous",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "team",
+            "predicate": "considering_switching_to",
+            "object_value": "Kubernetes",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "52f903d4-3921-41e3-a13f-caa97b37d832",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object; no overlap with new memory."
+                },
+                {
+                    "memory_id": "87459945-67f5-4a4e-b03e-1f469f0ebefd",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object; no overlap with new memory."
+                },
+                {
+                    "memory_id": "0f78c32e-2b74-4f1d-aa61-0967812b07bc",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object; no overlap with new memory."
+                },
+                {
+                    "memory_id": "32b520c8-ac49-4a13-a2fe-853b6faedaf9",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object; no overlap with new memory."
+                },
+                {
+                    "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object; no overlap with new memory."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "b291a284-57da-425b-90b2-6b7caa5ca0dc",
+            "subject": "team",
+            "predicate": "considering_switching_to",
+            "object_value": "Kubernetes",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:13:11.002211Z"
+        }
+    },
+    {
+        "id": 39,
+        "input": "The application could support multiple languages later.",
+        "category": "ambiguous",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "application",
+            "predicate": "supports_multiple_languages",
+            "object_value": "multiple languages",
+            "context": null,
+            "confidence": 0.7,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no overlap."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no overlap."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no overlap."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no overlap."
+                },
+                {
+                    "memory_id": "73ffcb4c-d2f5-4041-9ced-8155e2320a71",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no overlap."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "da497fe9-abe0-4989-9637-c108a8039ee3",
+            "subject": "application",
+            "predicate": "supports_multiple_languages",
+            "object_value": "multiple languages",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 0.7,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:13:32.911271Z"
+        }
+    },
+    {
+        "id": 40,
+        "input": "The search engine might eventually use a different vector database.",
+        "category": "ambiguous",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "search engine",
+            "predicate": "might_use_different_vector_database",
+            "object_value": "different vector database",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs from new memory's subject; no overlap in predicate or object; no context linking them."
+                },
+                {
+                    "memory_id": "957e467e-8fe7-487d-b9bc-ac2c30e4f4e3",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs from new memory's subject; no overlap in predicate or object; no context linking them."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs from new memory's subject; no overlap in predicate or object; no context linking them."
+                },
+                {
+                    "memory_id": "7340dce4-965d-4aac-b2b9-8ae8c8f7e896",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs from new memory's subject; no overlap in predicate or object; no context linking them."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs from new memory's subject; no overlap in predicate or object; no context linking them."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "4274b05b-be5a-412c-a0ce-eb0badf04d19",
+            "subject": "search engine",
+            "predicate": "might_use_different_vector_database",
+            "object_value": "different vector database",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:13:46.647743Z"
+        }
+    },
+    {
+        "id": 41,
+        "input": "The application supports English.",
+        "category": "coexist",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "application",
+            "predicate": "supports_language",
+            "object_value": "English",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "da497fe9-abe0-4989-9637-c108a8039ee3",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the application but use different predicates; the new memory states the application supports English, while the existing memory states it supports multiple languages, which can coexist."
+                },
+                {
+                    "memory_id": "e6cab6e2-d32f-48a2-8c2d-5986efd3e5dc",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the backend using Python 3.14 in a testing environment, unrelated to the application’s language support."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the backend using Python 3.12 in production, unrelated to the application’s language support."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the backend using Python 3.15 in production, unrelated to the application’s language support."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "UNRELATED",
+                    "reason": "The existing memory concerns the backend using Python 3.14 in development, unrelated to the application’s language support."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "33a921ae-c2ea-413a-a5fe-5dd6ab7592d2",
+            "subject": "application",
+            "predicate": "supports_language",
+            "object_value": "English",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:03.353299Z"
+        }
+    },
+    {
+        "id": 42,
+        "input": "The application supports Hindi.",
+        "category": "coexist",
+        "expected": "COEXIST",
+        "success": true,
+        "extraction": {
+            "subject": "application",
+            "predicate": "supports_language",
+            "object_value": "Hindi",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "33a921ae-c2ea-413a-a5fe-5dd6ab7592d2",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the same subject, predicate, and context but provide different language support; the application can support multiple languages."
+                },
+                {
+                    "memory_id": "da497fe9-abe0-4989-9637-c108a8039ee3",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory specifies a particular language support, while the existing memory indicates that the application supports multiple languages; they can coexist."
+                },
+                {
+                    "memory_id": "99589431-677c-4afa-89eb-b65a7efe0e3c",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no meaningful relationship."
+                },
+                {
+                    "memory_id": "bf4d48bb-3948-4f75-8230-7b2937f36c5e",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                },
+                {
+                    "memory_id": "45819de6-7b0f-458c-9f0d-7cce9dcb11e9",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "8b62e1f5-452f-48e9-85be-b3b5eee52121",
+            "subject": "application",
+            "predicate": "supports_language",
+            "object_value": "Hindi",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:12.934038Z"
+        }
+    },
+    {
+        "id": 43,
+        "input": "The analytics service supports CSV exports.",
+        "category": "coexist",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "analytics service",
+            "predicate": "supports_csv_exports",
+            "object_value": "CSV exports",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the same subject 'analytics service' but describe different properties (supports_csv_exports vs uses_language), so they can coexist."
+                },
+                {
+                    "memory_id": "1faf2e71-c055-4c76-850f-bb3451d03f13",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the same subject 'analytics service' but describe different properties (supports_csv_exports vs generates_weekly_reports), so they can coexist."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns 'analytics service', while this memory concerns 'Atlas project', so they are unrelated."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns 'analytics service', while this memory concerns 'notification service', so they are unrelated."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns 'analytics service', while this memory concerns 'Atlas project', so they are unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "c4153e93-7b2d-411c-869d-853497d6c0ee",
+            "subject": "analytics service",
+            "predicate": "supports_csv_exports",
+            "object_value": "CSV exports",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:22.819447Z"
+        }
+    },
+    {
+        "id": 44,
+        "input": "The analytics service supports JSON exports.",
+        "category": "coexist",
+        "expected": "COEXIST",
+        "success": true,
+        "extraction": {
+            "subject": "analytics service",
+            "predicate": "supports_json_exports",
+            "object_value": "JSON exports",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "c4153e93-7b2d-411c-869d-853497d6c0ee",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to different export capabilities of the analytics service (JSON vs CSV)."
+                },
+                {
+                    "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory concerns export format support, while the existing memory concerns programming language usage; they are unrelated aspects of the analytics service."
+                },
+                {
+                    "memory_id": "1faf2e71-c055-4c76-850f-bb3451d03f13",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory addresses JSON export support, whereas the existing memory addresses report generation; they are distinct functionalities."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory is about the analytics service, while the existing memory is about the Atlas project; different subjects."
+                },
+                {
+                    "memory_id": "da497fe9-abe0-4989-9637-c108a8039ee3",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory concerns the analytics service, whereas the existing memory concerns a general application; different subjects."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "daec1c86-58bf-4ba4-9d2c-815a72d7d15c",
+            "subject": "analytics service",
+            "predicate": "supports_json_exports",
+            "object_value": "JSON exports",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:33.702903Z"
+        }
+    },
+    {
+        "id": 45,
+        "input": "The application supports both desktop and mobile platforms.",
+        "category": "coexist",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "application",
+            "predicate": "supports_platforms",
+            "object_value": "desktop and mobile platforms",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "83fa8515-c356-4ad9-8e54-eefa8fa2c2ac",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate and subject; no shared facts."
+                },
+                {
+                    "memory_id": "33a921ae-c2ea-413a-a5fe-5dd6ab7592d2",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate; subject same but property differs."
+                },
+                {
+                    "memory_id": "da497fe9-abe0-4989-9637-c108a8039ee3",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate; subject same but property differs."
+                },
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; unrelated context."
+                },
+                {
+                    "memory_id": "d2995e06-10ce-41c7-958d-81c5bcc6287c",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; unrelated context."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "32d3741b-6fe8-4118-b88b-1f84358048cb",
+            "subject": "application",
+            "predicate": "supports_platforms",
+            "object_value": "desktop and mobile platforms",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:44.778686Z"
+        }
+    },
+    {
+        "id": 46,
+        "input": "The payment service uses Stripe for subscriptions.",
+        "category": "mixed",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "payment service",
+            "predicate": "uses_subscription_service",
+            "object_value": "Stripe",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "COEXIST",
+                    "reason": "The new memory describes a payment service using Stripe as a subscription service, while the existing memory describes a billing service using Stripe as a payment processor. The subjects and predicates differ, so both can be true simultaneously."
+                },
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a payment service and Stripe, whereas the existing memory concerns a billing service and Razorpay. Subjects, predicates, and objects differ, indicating no meaningful relationship."
+                },
+                {
+                    "memory_id": "120f50fb-2d04-4869-bc34-dfe7a0f0b9b0",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory is about a payment service and Stripe, while the existing memory is about a notification service and Amazon SES. Different subjects, predicates, and objects mean no relationship."
+                },
+                {
+                    "memory_id": "88f11de0-78ab-4adb-b878-50af9e4add28",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory involves a payment service and Stripe, whereas the existing memory involves a notification service and SendGrid. No overlap in subject, predicate, or object."
+                },
+                {
+                    "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+                    "relationship": "UNRELATED",
+                    "reason": "The new memory concerns a payment service and Stripe, while the existing memory concerns an analytics service and Python 3.12. Subjects, predicates, and objects are unrelated."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "1a2a3928-fa95-4fd2-9b5f-76ab828d9f59",
+            "subject": "payment service",
+            "predicate": "uses_subscription_service",
+            "object_value": "Stripe",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:14:52.512529Z"
+        }
+    },
+    {
+        "id": 47,
+        "input": "The payment service uses Razorpay for one-time payments.",
+        "category": "mixed",
+        "expected": "COEXIST",
+        "success": true,
+        "extraction": {
+            "subject": "payment service",
+            "predicate": "uses_payment_gateway",
+            "object_value": "Razorpay",
+            "context": null,
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "d1b13633-d45a-4f8d-bd89-b7163704baa3",
+                    "relationship": "COEXIST",
+                    "reason": "Both services use Razorpay but are distinct services."
+                },
+                {
+                    "memory_id": "1a2a3928-fa95-4fd2-9b5f-76ab828d9f59",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate and object; no overlap."
+                },
+                {
+                    "memory_id": "4ef54208-6a0c-4be2-8510-31ee615d9f41",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate."
+                },
+                {
+                    "memory_id": "f7083aed-f4a5-4763-bf88-68752463e878",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object."
+                },
+                {
+                    "memory_id": "badf173c-f3d0-458d-a3de-9900ab89ec42",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject, predicate, and object."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "719de99c-f479-452a-8c88-f805cc2b6616",
+            "subject": "payment service",
+            "predicate": "uses_payment_gateway",
+            "object_value": "Razorpay",
+            "context": null,
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:15:16.739046Z"
+        }
+    },
+    {
+        "id": 48,
+        "input": "The production database uses PostgreSQL.",
+        "category": "mixed",
+        "expected": "ADD",
+        "success": true,
+        "extraction": {
+            "subject": "database",
+            "predicate": "uses_database_engine",
+            "object_value": "PostgreSQL",
+            "context": "production environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (database vs Atlas project) and context is not shared."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (database vs Atlas project) and object_value differs (PostgreSQL vs MySQL)."
+                },
+                {
+                    "memory_id": "4274b05b-be5a-412c-a0ce-eb0badf04d19",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject, predicate, and object_value all differ from the new memory."
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Subject differs (database vs MemoryMesh project) and object_value differs (PostgreSQL vs SQLite)."
+                },
+                {
+                    "memory_id": "5f693978-9772-466a-84a5-ad139bfd88ec",
+                    "relationship": "UNRELATED",
+                    "reason": "Predicate differs (uses_database_engine vs uses_language) despite same context."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "ACTIVE",
+            "updates": []
+        },
+        "saved_memory": {
+            "memory_id": "e2134d19-e707-4678-8284-d8ef6e349e30",
+            "subject": "database",
+            "predicate": "uses_database_engine",
+            "object_value": "PostgreSQL",
+            "context": "production environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "ACTIVE",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:15:25.623964Z"
+        }
+    },
+    {
+        "id": 49,
+        "input": "The production database now uses MySQL.",
+        "category": "mixed",
+        "expected": "CONFLICT",
+        "success": true,
+        "extraction": {
+            "subject": "database",
+            "predicate": "uses_database_engine",
+            "object_value": "MySQL",
+            "context": "production environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "e2134d19-e707-4678-8284-d8ef6e349e30",
+                    "relationship": "CONFLICT",
+                    "reason": "Same subject, predicate, and context but different object values (MySQL vs PostgreSQL)."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (Atlas project vs database)."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (Atlas project vs database)."
+                },
+                {
+                    "memory_id": "4274b05b-be5a-412c-a0ce-eb0badf04d19",
+                    "relationship": "UNRELATED",
+                    "reason": "Different predicate and subject. "
+                },
+                {
+                    "memory_id": "b0b55c68-4a49-4814-800f-8f111fd522cf",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (MemoryMesh project vs database)."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "e2134d19-e707-4678-8284-d8ef6e349e30",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "f247303a-b959-4a21-9986-ca6c58661c82",
+            "subject": "database",
+            "predicate": "uses_database_engine",
+            "object_value": "MySQL",
+            "context": "production environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:15:37.211493Z"
+        }
+    },
+    {
+        "id": 50,
+        "input": "The production database has been migrated from PostgreSQL to MySQL.",
+        "category": "mixed",
+        "expected": "SUPERSEDE",
+        "success": true,
+        "extraction": {
+            "subject": "database",
+            "predicate": "migrated_to",
+            "object_value": "MySQL",
+            "context": "production environment",
+            "confidence": 1.0,
+            "valid_from": null,
+            "valid_to": null
+        },
+        "comparisons": {
+            "comparisons": [
+                {
+                    "memory_id": "f247303a-b959-4a21-9986-ca6c58661c82",
+                    "relationship": "COEXIST",
+                    "reason": "Both memories refer to the database in production using MySQL; the new memory indicates a migration event, while the existing memory indicates current usage. They can coexist."
+                },
+                {
+                    "memory_id": "e2134d19-e707-4678-8284-d8ef6e349e30",
+                    "relationship": "CONFLICT",
+                    "reason": "New memory states the database migrated to MySQL in production, whereas existing memory claims it uses PostgreSQL in the same context, which contradicts."
+                },
+                {
+                    "memory_id": "a04c26c9-0d4c-4a3d-bbe7-6401fe5afdfc",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject (Atlas project vs database) and no overlapping context; no meaningful relationship."
+                },
+                {
+                    "memory_id": "4274b05b-be5a-412c-a0ce-eb0badf04d19",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject and predicate; no meaningful relationship."
+                },
+                {
+                    "memory_id": "35d8130c-5333-4bae-bf71-e18cabc85e99",
+                    "relationship": "UNRELATED",
+                    "reason": "Different subject; no meaningful relationship."
+                }
+            ]
+        },
+        "resolution_plan": {
+            "should_insert": true,
+            "candidate_status": "UNRESOLVED",
+            "updates": [
+                {
+                    "memory_id": "e2134d19-e707-4678-8284-d8ef6e349e30",
+                    "status": "UNRESOLVED"
+                }
+            ]
+        },
+        "saved_memory": {
+            "memory_id": "c843d5c6-2624-43be-8645-ab241e073a1a",
+            "subject": "database",
+            "predicate": "migrated_to",
+            "object_value": "MySQL",
+            "context": "production environment",
+            "source_id": "user_input",
+            "confidence": 1.0,
+            "status": "UNRESOLVED",
+            "valid_from": null,
+            "valid_to": null,
+            "recorded_at": "2026-11-07T17:15:51.183689Z"
+        }
+    }
+]
