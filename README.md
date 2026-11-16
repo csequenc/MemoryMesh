@@ -2,7 +2,7 @@
 
 **A general-purpose AI memory engine that extracts, stores, retrieves, and resolves information over time.**
 
-MemoryMesh turns natural-language inputs into structured memories and maintains a persistent knowledge base. When new information arrives, it uses semantic retrieval and LLM-based comparison to identify duplicates, updates, coexistence, and conflicts rather than blindly overwriting existing information.
+MemoryMesh turns natural-language inputs into structured memories and maintains a persistent knowledge base. When new information arrives, it uses semantic retrieval and LLM-based comparison to identify relationships with existing memories, then applies deterministic rules to resolve conflicts and preserve history.
 
 ## Features
 
@@ -20,23 +20,11 @@ MemoryMesh turns natural-language inputs into structured memories and maintains 
 
 ```mermaid
 flowchart TD
-    A[User Input] --> B{Input Type}
-    B -->|Remember| C[Memory Extraction]
-    B -->|Question| D[Semantic Retrieval]
-    
-    C --> E[Structured Memory]
-    E --> F[Semantic Retrieval]
-    F --> G[LLM Comparison]
-    G --> H[Deterministic Resolver]
-    H --> I[(SQLite Database)]
-    
-    I --> J[Knowledge Graph]
-    I --> D
-    D --> K[Answer Generation]
-    K --> L[Response]
-    
-    J --> M[React Interface]
-    L --> M
+    A[Input] --> B[Extraction]
+    B --> C[Retrieval]
+    C --> D[LLM Comparison]
+    D --> E[Deterministic Resolver]
+    E --> F[(SQLite Database)]
 ```
 
 ## How memory resolution works
@@ -103,6 +91,7 @@ Memory history is preserved: superseded memories remain stored rather than being
 MemoryMesh/
 ├── app/
 │   ├── api/
+│   │   └── main.py          # FastAPI entry point
 │   ├── database/
 │   ├── graph/
 │   ├── ingestion/
@@ -111,7 +100,7 @@ MemoryMesh/
 │   ├── query/
 │   ├── resolution/
 │   ├── retrieval/
-│   └── main.py
+│   └── main.py              # CLI entry point
 ├── dev_tests/
 ├── frontend/
 ├── .gitignore
@@ -128,23 +117,32 @@ MemoryMesh/
 ### Prerequisites
 
 - Python 3.10+
-- Node.js and npm
+- Node.js 20.19+ or 22.12+, and npm
 - A Groq API key
 
 ### 1. Clone the repository
 
-```powershell
-git clone <repository-url>
+```bash
+git clone https://github.com/csequenc/MemoryMesh.git
 cd MemoryMesh
 ```
 
 ### 2. Set up the backend
 
+On macOS/Linux:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+On Windows PowerShell:
+
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 Create a `.env` file in the project root:
@@ -155,8 +153,8 @@ GROQ_API_KEY=your_groq_api_key
 
 ### 3. Start the backend
 
-```powershell
-uvicorn app.api.main:app --reload
+```bash
+python -m uvicorn app.api.main:app --reload
 ```
 
 The backend will be available at:
@@ -165,11 +163,11 @@ The backend will be available at:
 
 ### 4. Set up the frontend
 
-Open another terminal:
+Open another terminal from the project root:
 
-```powershell
+```bash
 cd frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -190,7 +188,7 @@ The conversational interface supports the `/remember` command for explicitly add
 
 ## Evaluation
 
-The main evaluation suite contains 25 memory-resolution scenarios.
+The main evaluation suite contains 25 memory-resolution scenarios. The 25 scenarios were written by the project author, so results are not independent of the author's labeling choices.
 
 **Latest recorded evaluation:**
 
@@ -206,6 +204,7 @@ The evaluation is intended to expose the limitations of semantic judgment, not t
 ## Current limitations
 
 - Semantic retrieval uses a limited top-k candidate set; relevant memories may be missed.
+- The 25 scenarios were written by the project author, so results are not independent of the author's labeling choices.
 - LLM comparison introduces judgment variability.
 - The current ingestion flow treats inputs as factual information.
 - One input is processed as one intended information unit.
