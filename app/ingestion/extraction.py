@@ -145,10 +145,39 @@ Return these fields:
    the subject.
 
 4. context:
-   Additional information that meaningfully identifies
-   the scope of the memory.
-   Do not repeat information already represented by subject.
-   Return null if no meaningful context is available.
+   Preserve additional information that distinguishes the
+   circumstances, purpose, role, or scope of a fact.
+
+   In particular, preserve a distinct functional role or
+   purpose when the same subject-predicate-object
+   relationship can describe multiple uses.
+
+   Examples:
+
+   "The cache service uses Redis for caching"
+   context: caching
+
+   "The cache service also uses Redis as a message queue"
+   context: message queue
+
+   "The backend uses Redis for session storage"
+   context: session storage
+
+   "The production backend uses Python 3.15"
+   context: production environment
+
+   "The development backend uses Python 3.13"
+   context: development environment
+
+   Do not discard a functional distinction merely because
+   the subject, predicate, and object are identical.
+
+   Do not invent context or extract incidental wording.
+   Do not repeat information already represented by subject,
+   predicate, or object_value.
+
+   Return null only when no meaningful distinguishing
+   context is available.
 
 5. confidence:
    Estimate how confidently you extracted the intended
