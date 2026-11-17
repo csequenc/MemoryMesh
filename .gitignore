@@ -1,6 +1,11 @@
-venv/
-.env
-__pycache__/
-*.pyc
+# Git bundles
+*.bundle
+
+# Local databases and encrypted files
 *.db
-.pytest_cache/
+*.enc
+
+# Environment variables
+.env
+.env.*
+!.env.example
