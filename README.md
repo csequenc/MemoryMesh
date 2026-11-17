@@ -4,11 +4,11 @@
 
 MemoryMesh is an AI-powered memory system designed to store, retrieve, and manage information through natural-language conversations. It combines semantic search, memory resolution, and language models to maintain useful context over time.
 
-**Live Demo:** [https://memorymesh-hloe.onrender.com/](https://memorymesh-hloe.onrender.com/)
+**Live Demo:** [Open MemoryMesh](https://memorymesh-hloe.onrender.com/)
 
-**API Documentation:** [https://memorymesh-api-kolz.onrender.com/docs](https://memorymesh-api-kolz.onrender.com/docs)
+**API Documentation:** [Explore API Docs](https://memorymesh-api-kolz.onrender.com/docs)
 
-**Repository:** [https://github.com/csequenc/MemoryMesh](https://github.com/csequenc/MemoryMesh)
+**Repository:** [GitHub](https://github.com/csequenc/MemoryMesh)
 
 ---
 
@@ -24,51 +24,91 @@ MemoryMesh is an AI-powered memory system designed to store, retrieve, and manag
 
 ## 🛠️ Tech Stack
 
-| Layer           | Technology              |
-| --------------- | ----------------------- |
-| Backend         | Python, FastAPI         |
-| Frontend        | React, TypeScript, Vite |
-| Database        | SQLite, SQLAlchemy      |
-| Embedding Model | all-MiniLM-L6-v2        |
-| Model Runtime   | ONNX Runtime            |
-| LLM Integration | Groq API                |
-| Deployment      | Render                  |
+| Layer | Technology |
+|---|---|
+| Backend | Python, FastAPI |
+| Frontend | React, TypeScript, Vite |
+| Database | SQLite, SQLAlchemy |
+| Embedding Model | all-MiniLM-L6-v2 |
+| Model Runtime | ONNX Runtime |
+| LLM Integration | Groq API |
+| Deployment | Render |
 
-## 🧠 How It Works
+## 🧠 System Architecture
 
-MemoryMesh follows a memory ingestion and retrieval pipeline.
+The architecture separates memory ingestion, memory resolution, storage, and semantic retrieval.
 
-```text
-User Input
-    |
-    v
-Memory Ingestion
-    |
-    v
-Memory Processing
-    |
-    v
-Memory Resolution
-    |
-    v
-Database Storage
-    |
-    v
-Semantic Retrieval
-    |
-    v
-LLM Context Generation
-    |
-    v
-AI Response
+```mermaid
+flowchart TB
+    U(["User"])
+
+    subgraph FRONTEND["Frontend · React + TypeScript"]
+        UI["Chat Interface"]
+        MG["Memory Management"]
+        KG["Knowledge Graph View"]
+    end
+
+    subgraph BACKEND["Backend · FastAPI"]
+        API["REST API"]
+
+        subgraph INGESTION["Memory Ingestion Pipeline"]
+            IP["Input Processing"]
+            MR["Memory Resolver"]
+            IP --> MR
+        end
+
+        subgraph RETRIEVAL["Memory Retrieval Pipeline"]
+            SS["Semantic Search"]
+            EMB["ONNX Embedding Model<br/>all-MiniLM-L6-v2"]
+            CTX["Retrieved Memory Context"]
+            SS --> EMB
+            EMB --> CTX
+        end
+
+        LLM["Groq LLM"]
+    end
+
+    DB[("SQLite Database")]
+
+    U --> UI
+    U --> MG
+
+    UI --> API
+    MG --> API
+    KG --> API
+
+    API --> IP
+    MR --> DB
+
+    API --> SS
+    DB --> SS
+    CTX --> LLM
+    LLM --> API
+
+    API --> UI
+    API --> MG
+    API --> KG
+
+    classDef frontend fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
+    classDef backend fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef storage fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef ai fill:#f3e8ff,stroke:#9333ea,color:#581c87
+
+    class UI,MG,KG frontend
+    class API,IP,MR,SS,CTX backend
+    class DB storage
+    class EMB,LLM ai
 ```
 
-1. **Ingestion:** The user submits information through the chat interface.
-2. **Processing:** The backend processes the input and identifies memory candidates.
-3. **Resolution:** New information is checked against existing memories for duplicates, conflicts, and supersession.
-4. **Storage:** Resolved memories are persisted in the database.
-5. **Retrieval:** Semantic search retrieves relevant active memories for a query.
-6. **Response:** Retrieved memories provide context for the language model to generate a response.
+### How It Works
+
+1. **User Input:** Users interact with MemoryMesh through the chat interface.
+2. **Memory Ingestion:** The backend processes incoming information and identifies memory candidates.
+3. **Memory Resolution:** New candidates are checked against existing memories to identify duplicates, conflicts, and superseded information.
+4. **Database Storage:** Resolved memories are stored persistently in SQLite.
+5. **Semantic Retrieval:** When a user asks a question, the retrieval pipeline searches for relevant active memories using semantic embeddings.
+6. **Context Generation:** Retrieved memories are supplied as context to the language model.
+7. **AI Response:** The generated response is returned to the frontend.
 
 ## 🏗️ Project Structure
 
@@ -110,7 +150,7 @@ cd MemoryMesh
 
 ### 2. Set Up the Backend
 
-Install the dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -178,10 +218,10 @@ The ONNX implementation avoids the heavier PyTorch-based Sentence Transformers r
 
 MemoryMesh maintains separate databases for personal workflows and the public demo.
 
-| Database             | Purpose                          |
-| -------------------- | -------------------------------- |
-| `memorymesh.db`      | Personal and local CLI workflows |
-| `memorymesh_demo.db` | Public demo API                  |
+| Database | Purpose |
+|---|---|
+| `memorymesh.db` | Personal and local CLI workflows |
+| `memorymesh_demo.db` | Public demo API |
 
 The public API uses the demo database exclusively, keeping public demo activity separate from the personal database.
 
@@ -191,10 +231,10 @@ When the demo database is empty, fictional sample memories are automatically ins
 
 The application is deployed on Render.
 
-| Service           | URL                                                                   |
-| ----------------- | --------------------------------------------------------------------- |
-| Frontend          | [MemoryMesh Live Demo](https://memorymesh-hloe.onrender.com/)         |
-| Backend           | [MemoryMesh API](https://memorymesh-api-kolz.onrender.com/)           |
+| Service | URL |
+|---|---|
+| Frontend | [MemoryMesh Live Demo](https://memorymesh-hloe.onrender.com/) |
+| Backend | [MemoryMesh API](https://memorymesh-api-kolz.onrender.com/) |
 | API Documentation | [Interactive API Docs](https://memorymesh-api-kolz.onrender.com/docs) |
 
 ### Environment Variables
@@ -252,4 +292,4 @@ Potential areas for further development include:
 
 ---
 
-\<p align="center">   \<strong>Building AI systems that remember.\</strong> \</p>
+**Building AI systems that remember.**
