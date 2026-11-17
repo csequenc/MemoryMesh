@@ -23,9 +23,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "368e0f96-2632-4625-b949-242f69da240c",
+          "memory_id": "6612d5ed-af01-4110-89d7-7f93a90e966c",
           "relationship": "DUPLICATE",
-          "reason": "Both memories state that the MemoryMesh backend uses Python 3.12 in the MemoryMesh project."
+          "reason": "Both memories state that the backend uses Python 3.12 in the MemoryMesh project, representing the same fact."
         }
       ],
       "resolution_plan": {
@@ -35,7 +35,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "368e0f96-2632-4625-b949-242f69da240c",
+          "memory_id": "6612d5ed-af01-4110-89d7-7f93a90e966c",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.12",
@@ -52,10 +52,10 @@
       "passed": true,
       "input": "FastAPI is the framework behind the MemoryMesh API.",
       "extraction": {
-        "subject": "MemoryMesh API",
+        "subject": "API",
         "predicate": "uses_framework",
         "object_value": "FastAPI",
-        "context": null,
+        "context": "MemoryMesh project",
         "confidence": 1.0,
         "valid_from": null,
         "valid_to": null
@@ -63,9 +63,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "f8e9ae56-08a1-4622-9296-108bf97ebfc7",
+          "memory_id": "122ab3cf-782c-470c-876c-ef28576924e4",
           "relationship": "DUPLICATE",
-          "reason": "Both memories state that the MemoryMesh API uses FastAPI; subject names differ but refer to the same entity, and context indicates the same project."
+          "reason": "The new memory states that the API uses FastAPI within the MemoryMesh project, which is identical to the existing memory\u2019s subject, predicate, object_value, and context. The facts are the same, so they are duplicates."
         }
       ],
       "resolution_plan": {
@@ -75,7 +75,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "f8e9ae56-08a1-4622-9296-108bf97ebfc7",
+          "memory_id": "122ab3cf-782c-470c-876c-ef28576924e4",
           "subject": "API",
           "predicate": "uses_framework",
           "object_value": "FastAPI",
@@ -93,8 +93,8 @@
       "input": "Cytoscape.js powers the MemoryMesh graph visualization.",
       "extraction": {
         "subject": "Cytoscape.js",
-        "predicate": "powers",
-        "object_value": "MemoryMesh graph visualization",
+        "predicate": "uses_graph_visualization_library",
+        "object_value": "graph visualization",
         "context": "MemoryMesh project",
         "confidence": 1.0,
         "valid_from": null,
@@ -103,9 +103,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "f1eceec2-91ae-4517-b8f7-8cce4709d20b",
+          "memory_id": "574c6cdc-b434-4095-bc36-15e72ef83a57",
           "relationship": "DUPLICATE",
-          "reason": "Both memories describe the same underlying fact that Cytoscape.js is the library powering the MemoryMesh graph visualization. The subject, predicate, and object are expressed in reverse order but refer to the same entities and property within the same context."
+          "reason": "The new memory states that Cytoscape.js uses the graph visualization, while the existing memory states that the graph visualization uses Cytoscape.js. Both describe the same underlying fact with identical context (MemoryMesh project) and predicate, just with subject and object swapped. Therefore they are duplicates."
         }
       ],
       "resolution_plan": {
@@ -115,7 +115,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "f1eceec2-91ae-4517-b8f7-8cce4709d20b",
+          "memory_id": "574c6cdc-b434-4095-bc36-15e72ef83a57",
           "subject": "graph visualization",
           "predicate": "uses_graph_visualization_library",
           "object_value": "Cytoscape.js",
@@ -132,8 +132,8 @@
       "passed": true,
       "input": "The embedding model for MemoryMesh is all-MiniLM-L6-v2.",
       "extraction": {
-        "subject": "MemoryMesh",
-        "predicate": "embedding_model",
+        "subject": "MemoryMesh project",
+        "predicate": "uses_embedding_model",
         "object_value": "all-MiniLM-L6-v2",
         "context": null,
         "confidence": 1.0,
@@ -143,9 +143,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "2acf1beb-a5b2-401c-a6ed-9594c3cb8c87",
+          "memory_id": "601fdd02-3fa2-4e06-b06b-2d63116a5e0d",
           "relationship": "DUPLICATE",
-          "reason": "Both memories state that MemoryMesh (project) uses the embedding model all-MiniLM-L6-v2, expressed with equivalent predicates and subject names."
+          "reason": "Same subject, predicate, object_value, and context as the new memory."
         }
       ],
       "resolution_plan": {
@@ -155,7 +155,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "2acf1beb-a5b2-401c-a6ed-9594c3cb8c87",
+          "memory_id": "601fdd02-3fa2-4e06-b06b-2d63116a5e0d",
           "subject": "MemoryMesh project",
           "predicate": "uses_embedding_model",
           "object_value": "all-MiniLM-L6-v2",
@@ -172,7 +172,7 @@
       "passed": true,
       "input": "Qdrant is the vector search engine used by Mercury.",
       "extraction": {
-        "subject": "Mercury",
+        "subject": "Mercury project",
         "predicate": "uses_vector_search_engine",
         "object_value": "Qdrant",
         "context": null,
@@ -183,9 +183,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "26072a15-c326-402f-b886-9f182db4bf82",
+          "memory_id": "b1188220-74fd-4735-bb32-d3e64e8dd5e3",
           "relationship": "DUPLICATE",
-          "reason": "Both memories state that Mercury (the Mercury project) uses Qdrant as its vector search engine, differing only in the subject name but referring to the same entity and property."
+          "reason": "The new memory has the same subject, predicate, object_value, and context as the existing memory, indicating the same underlying fact."
         }
       ],
       "resolution_plan": {
@@ -195,7 +195,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "26072a15-c326-402f-b886-9f182db4bf82",
+          "memory_id": "b1188220-74fd-4735-bb32-d3e64e8dd5e3",
           "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Qdrant",
@@ -223,9 +223,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "73885932-4d80-443c-b5b0-1a60fd814381",
+          "memory_id": "49dda524-25f1-4014-8ac9-98982a06a5df",
           "relationship": "CONFLICT",
-          "reason": "Both memories refer to the same backend in the MemoryMesh project and the same property uses_language, but the object values differ (Java vs Python 3.12). The original statement does not indicate that Java replaced Python, so the memories are in conflict."
+          "reason": "Both memories refer to the same backend and the uses_language property but report different languages (Python 3.12 vs Java). There is no evidence that the new memory replaces the old one, so the facts conflict."
         }
       ],
       "resolution_plan": {
@@ -233,14 +233,14 @@
         "candidate_status": "UNRESOLVED",
         "updates": [
           {
-            "memory_id": "73885932-4d80-443c-b5b0-1a60fd814381",
+            "memory_id": "49dda524-25f1-4014-8ac9-98982a06a5df",
             "status": "UNRESOLVED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "73885932-4d80-443c-b5b0-1a60fd814381",
+          "memory_id": "49dda524-25f1-4014-8ac9-98982a06a5df",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.12",
@@ -248,7 +248,7 @@
           "status": "UNRESOLVED"
         },
         {
-          "memory_id": "01b240cc-c5a2-4994-b519-570b570e5909",
+          "memory_id": "2e690934-c7c9-42ca-9f89-ceddeb544ee3",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Java",
@@ -265,10 +265,10 @@
       "passed": false,
       "input": "The MemoryMesh API uses Django.",
       "extraction": {
-        "subject": "MemoryMesh API",
+        "subject": "API",
         "predicate": "uses_framework",
         "object_value": "Django",
-        "context": "MemoryMesh",
+        "context": "MemoryMesh project",
         "confidence": 1.0,
         "valid_from": null,
         "valid_to": null
@@ -276,9 +276,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "49d9fabe-dbca-4546-931c-5311a05807c9",
+          "memory_id": "8cc38ac2-7c35-4611-91c7-025aeee4a024",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the MemoryMesh API uses Django, which replaces the previous memory that the API used FastAPI."
+          "reason": "Both memories refer to the same API in the MemoryMesh project and describe the same property (uses_framework). The new memory states that the API uses Django, whereas the existing memory states it uses FastAPI. The new memory reflects an updated framework for the same entity and context, indicating that the previous value has been replaced."
         }
       ],
       "resolution_plan": {
@@ -286,14 +286,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "49d9fabe-dbca-4546-931c-5311a05807c9",
+            "memory_id": "8cc38ac2-7c35-4611-91c7-025aeee4a024",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "49d9fabe-dbca-4546-931c-5311a05807c9",
+          "memory_id": "8cc38ac2-7c35-4611-91c7-025aeee4a024",
           "subject": "API",
           "predicate": "uses_framework",
           "object_value": "FastAPI",
@@ -301,11 +301,11 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "f5f8c4d3-3d1a-4ea9-9400-d0d7d12c9b85",
-          "subject": "MemoryMesh API",
+          "memory_id": "6adbd5e1-78c9-4686-9aa4-15bf6998452e",
+          "subject": "API",
           "predicate": "uses_framework",
           "object_value": "Django",
-          "context": "MemoryMesh",
+          "context": "MemoryMesh project",
           "status": "ACTIVE"
         }
       ]
@@ -329,9 +329,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "045dbd37-f227-4bce-b108-e0b79c7210f4",
+          "memory_id": "91e3d4d8-f1d4-4e4c-a5a7-b2286298d591",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the Mercury project uses Weaviate for vector search, while the existing memory indicates it uses Qdrant. The original user statement confirms the current usage of Weaviate, implying that the previous vector search engine (Qdrant) has been replaced. Therefore the new memory supersedes the old one."
+          "reason": "The new memory indicates that the Mercury project now uses Weaviate for vector search, replacing the previously recorded use of Qdrant."
         }
       ],
       "resolution_plan": {
@@ -339,14 +339,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "045dbd37-f227-4bce-b108-e0b79c7210f4",
+            "memory_id": "91e3d4d8-f1d4-4e4c-a5a7-b2286298d591",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "045dbd37-f227-4bce-b108-e0b79c7210f4",
+          "memory_id": "91e3d4d8-f1d4-4e4c-a5a7-b2286298d591",
           "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Qdrant",
@@ -354,7 +354,7 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "bc581610-f254-407d-97eb-7cfb52cff9fc",
+          "memory_id": "0c310511-6a53-43f9-afa0-c965dccc6508",
           "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Weaviate",
@@ -372,7 +372,7 @@
       "input": "The search service uses OpenSearch.",
       "extraction": {
         "subject": "search service",
-        "predicate": "uses_search_engine",
+        "predicate": "uses_indexing_engine",
         "object_value": "OpenSearch",
         "context": null,
         "confidence": 1.0,
@@ -382,9 +382,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "2be57cb3-95d5-4e05-97dc-746a539a95e9",
+          "memory_id": "0d23d6c1-caa6-476c-a7f8-b9615d9edd97",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the search service uses OpenSearch, which replaces the previously recorded Elasticsearch indexing engine for the same service. The subject and property are equivalent (search engine / indexing engine), and the new statement reflects a current state, indicating supersession of the old value."
+          "reason": "The new memory states that the search service uses OpenSearch, directly replacing the previous value of Elasticsearch for the same entity and property."
         }
       ],
       "resolution_plan": {
@@ -392,14 +392,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "2be57cb3-95d5-4e05-97dc-746a539a95e9",
+            "memory_id": "0d23d6c1-caa6-476c-a7f8-b9615d9edd97",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "2be57cb3-95d5-4e05-97dc-746a539a95e9",
+          "memory_id": "0d23d6c1-caa6-476c-a7f8-b9615d9edd97",
           "subject": "search service",
           "predicate": "uses_indexing_engine",
           "object_value": "Elasticsearch",
@@ -407,9 +407,9 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "6ebc7846-4b0e-47e5-bdcc-ddc94d874693",
+          "memory_id": "1197d717-e36e-4048-9fa0-956fd93d1038",
           "subject": "search service",
-          "predicate": "uses_search_engine",
+          "predicate": "uses_indexing_engine",
           "object_value": "OpenSearch",
           "context": null,
           "status": "ACTIVE"
@@ -435,9 +435,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "24f3d977-e87b-4351-8993-a70cdfd8b9b0",
+          "memory_id": "a9092518-5d0b-45b4-a512-026673e3bb9c",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the billing service uses PayPal as its payment gateway, which replaces the previous value of Razorpay for the same entity and property."
+          "reason": "The new memory states that the billing service uses PayPal as its payment gateway, which directly contradicts the existing memory that it uses Razorpay. The original user statement confirms PayPal, indicating that the billing service has switched from Razorpay to PayPal, so the new memory supersedes the old one."
         }
       ],
       "resolution_plan": {
@@ -445,14 +445,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "24f3d977-e87b-4351-8993-a70cdfd8b9b0",
+            "memory_id": "a9092518-5d0b-45b4-a512-026673e3bb9c",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "24f3d977-e87b-4351-8993-a70cdfd8b9b0",
+          "memory_id": "a9092518-5d0b-45b4-a512-026673e3bb9c",
           "subject": "billing service",
           "predicate": "uses_payment_gateway",
           "object_value": "Razorpay",
@@ -460,7 +460,7 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "c5ae85cf-d548-475c-bc15-054e3b7b17f3",
+          "memory_id": "1f4ea030-caba-47fc-8198-3d819e85aeb6",
           "subject": "billing service",
           "predicate": "uses_payment_gateway",
           "object_value": "PayPal",
@@ -488,9 +488,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "a0a1e1e8-342d-4144-987e-4ff810e735e6",
+          "memory_id": "428a0649-64ab-4e82-aea9-df4e9f66555a",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the backend uses Python 3.13, while the existing memory records Python 3.12. The original user statement explicitly says the backend migrated from Python 3.12 to Python 3.13, indicating that the new value replaces the old one."
+          "reason": "The new memory states that the backend migrated from Python 3.12 to Python 3.13, indicating that the previous value (Python 3.12) has been replaced by the new value (Python 3.13)."
         }
       ],
       "resolution_plan": {
@@ -498,14 +498,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "a0a1e1e8-342d-4144-987e-4ff810e735e6",
+            "memory_id": "428a0649-64ab-4e82-aea9-df4e9f66555a",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "a0a1e1e8-342d-4144-987e-4ff810e735e6",
+          "memory_id": "428a0649-64ab-4e82-aea9-df4e9f66555a",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.12",
@@ -513,7 +513,7 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "d56c4bdd-efd2-4d3b-ae11-5a7b196d3fdf",
+          "memory_id": "fa2c6a7d-9bbc-4a85-8559-c630aab89f12",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.13",
@@ -530,7 +530,7 @@
       "passed": true,
       "input": "We replaced FastAPI with Django for the MemoryMesh API.",
       "extraction": {
-        "subject": "MemoryMesh API",
+        "subject": "API",
         "predicate": "uses_framework",
         "object_value": "Django",
         "context": "MemoryMesh project",
@@ -541,9 +541,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "f02cd4c0-f737-4c19-b558-91e07e4aee37",
+          "memory_id": "2ea501ca-2a9d-4ca6-9bbf-24b0f2e26e2e",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory indicates that the MemoryMesh API now uses Django instead of FastAPI, and the original user statement explicitly states that FastAPI was replaced with Django for the MemoryMesh API. This directly supersedes the existing memory that recorded FastAPI as the framework for the same entity and context."
+          "reason": "The new memory states that the API now uses Django instead of FastAPI in the same MemoryMesh project, and the original user statement explicitly says \"We replaced FastAPI with Django for the MemoryMesh API.\""
         }
       ],
       "resolution_plan": {
@@ -551,14 +551,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "f02cd4c0-f737-4c19-b558-91e07e4aee37",
+            "memory_id": "2ea501ca-2a9d-4ca6-9bbf-24b0f2e26e2e",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "f02cd4c0-f737-4c19-b558-91e07e4aee37",
+          "memory_id": "2ea501ca-2a9d-4ca6-9bbf-24b0f2e26e2e",
           "subject": "API",
           "predicate": "uses_framework",
           "object_value": "FastAPI",
@@ -566,8 +566,8 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "10f3e865-5e1b-4983-a6b3-8533d71fb768",
-          "subject": "MemoryMesh API",
+          "memory_id": "1aeca124-1c8d-4403-9b0f-1de6a034c880",
+          "subject": "API",
           "predicate": "uses_framework",
           "object_value": "Django",
           "context": "MemoryMesh project",
@@ -583,7 +583,7 @@
       "passed": true,
       "input": "Mercury has switched its vector search engine from Qdrant to Weaviate.",
       "extraction": {
-        "subject": "Mercury",
+        "subject": "Mercury project",
         "predicate": "uses_vector_search_engine",
         "object_value": "Weaviate",
         "context": null,
@@ -594,9 +594,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "011f8a98-3d7a-4758-add0-3f14ca905bd9",
+          "memory_id": "423d8477-8018-425a-bfa0-21fe24594e63",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that Mercury switched its vector search engine from Qdrant to Weaviate, indicating that the previous value (Qdrant) has been replaced by Weaviate."
+          "reason": "The new memory indicates that Mercury project now uses Weaviate as its vector search engine, and the original user statement explicitly states that Mercury switched from Qdrant to Weaviate, showing that the previous value (Qdrant) has been replaced."
         }
       ],
       "resolution_plan": {
@@ -604,14 +604,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "011f8a98-3d7a-4758-add0-3f14ca905bd9",
+            "memory_id": "423d8477-8018-425a-bfa0-21fe24594e63",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "011f8a98-3d7a-4758-add0-3f14ca905bd9",
+          "memory_id": "423d8477-8018-425a-bfa0-21fe24594e63",
           "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Qdrant",
@@ -619,8 +619,8 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "da34769e-f054-4f85-b972-c3c36ac77649",
-          "subject": "Mercury",
+          "memory_id": "48317cec-fa42-4d17-9c86-040816e6b860",
+          "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Weaviate",
           "context": null,
@@ -647,9 +647,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "ae625bc7-6a82-4381-893e-6f28955de952",
+          "memory_id": "63e8a0d6-ae7b-4ce4-8038-527ea2c05693",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory indicates that the search service now uses OpenSearch, while the existing memory states it uses Elasticsearch. The original user statement explicitly says \"We migrated the search service from Elasticsearch to OpenSearch,\" confirming that the old value was replaced by the new one."
+          "reason": "The new memory indicates that the search service now uses OpenSearch, and the original user statement explicitly states a migration from Elasticsearch to OpenSearch, implying the old value was replaced."
         }
       ],
       "resolution_plan": {
@@ -657,14 +657,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "ae625bc7-6a82-4381-893e-6f28955de952",
+            "memory_id": "63e8a0d6-ae7b-4ce4-8038-527ea2c05693",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "ae625bc7-6a82-4381-893e-6f28955de952",
+          "memory_id": "63e8a0d6-ae7b-4ce4-8038-527ea2c05693",
           "subject": "search service",
           "predicate": "uses_search_engine",
           "object_value": "Elasticsearch",
@@ -672,7 +672,7 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "71e4c8a1-e831-440e-9259-16ac700b7fff",
+          "memory_id": "5fab9990-32c5-4393-a38d-5bbd2421d848",
           "subject": "search service",
           "predicate": "uses_search_engine",
           "object_value": "OpenSearch",
@@ -689,10 +689,10 @@
       "passed": true,
       "input": "The Phoenix frontend has been migrated from Vue to React.",
       "extraction": {
-        "subject": "Phoenix frontend",
-        "predicate": "frontend_technology",
+        "subject": "frontend",
+        "predicate": "uses_framework",
         "object_value": "React",
-        "context": null,
+        "context": "Phoenix project",
         "confidence": 1.0,
         "valid_from": null,
         "valid_to": null
@@ -700,9 +700,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "9df9870c-804c-4537-8966-6b462ea40c57",
+          "memory_id": "4bd99255-011d-4b29-9ed3-4298051a352f",
           "relationship": "SUPERSEDE",
-          "reason": "The new memory states that the Phoenix frontend now uses React, while the existing memory records that the frontend used Vue. The original user statement explicitly says the Phoenix frontend was migrated from Vue to React, indicating that the new value replaces the old one for the same entity and property."
+          "reason": "The new memory states that the Phoenix frontend now uses React, and the original user statement explicitly says it was migrated from Vue to React, indicating that the previous Vue usage has been replaced."
         }
       ],
       "resolution_plan": {
@@ -710,14 +710,14 @@
         "candidate_status": "ACTIVE",
         "updates": [
           {
-            "memory_id": "9df9870c-804c-4537-8966-6b462ea40c57",
+            "memory_id": "4bd99255-011d-4b29-9ed3-4298051a352f",
             "status": "SUPERSEDED"
           }
         ]
       },
       "final_database_state": [
         {
-          "memory_id": "9df9870c-804c-4537-8966-6b462ea40c57",
+          "memory_id": "4bd99255-011d-4b29-9ed3-4298051a352f",
           "subject": "frontend",
           "predicate": "uses_framework",
           "object_value": "Vue",
@@ -725,11 +725,11 @@
           "status": "SUPERSEDED"
         },
         {
-          "memory_id": "8457971e-c4ee-4fef-8cf2-ed51f1a8d074",
-          "subject": "Phoenix frontend",
-          "predicate": "frontend_technology",
+          "memory_id": "288eb49a-9e15-4abf-b9ae-40e9ac8f2361",
+          "subject": "frontend",
+          "predicate": "uses_framework",
           "object_value": "React",
-          "context": null,
+          "context": "Phoenix project",
           "status": "ACTIVE"
         }
       ]
@@ -753,9 +753,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "a59f1175-c40c-45f4-8b6f-e038b807e35c",
+          "memory_id": "4f9eb985-3d1d-4eae-9f04-56be3fad82fa",
           "relationship": "UNRELATED",
-          "reason": "The new memory refers to the frontend component, while the existing memory refers to the backend component; they are distinct entities within the same project, so the facts are unrelated."
+          "reason": "The new memory refers to the frontend component using TypeScript, while the existing memory refers to the backend component using Python 3.12. They describe different entities within the same project, so the facts are unrelated."
         }
       ],
       "resolution_plan": {
@@ -765,7 +765,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "a59f1175-c40c-45f4-8b6f-e038b807e35c",
+          "memory_id": "4f9eb985-3d1d-4eae-9f04-56be3fad82fa",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.12",
@@ -773,7 +773,7 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "8effb3a9-ac4b-4371-859d-5d1325a03fe5",
+          "memory_id": "6761eb66-be63-4286-8cea-71b9c1c07384",
           "subject": "frontend",
           "predicate": "uses_language",
           "object_value": "TypeScript",
@@ -791,9 +791,9 @@
       "input": "The payment service also uses Stripe specifically for recurring subscription payments.",
       "extraction": {
         "subject": "payment service",
-        "predicate": "uses_stripe_for_recurring_subscription_payments",
+        "predicate": "uses_payment_gateway",
         "object_value": "Stripe",
-        "context": null,
+        "context": "recurring subscription payments",
         "confidence": 1.0,
         "valid_from": null,
         "valid_to": null
@@ -801,9 +801,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "49936ab8-911e-4b1e-8e37-b8ef1aa9dfc4",
+          "memory_id": "9e7f48cf-2154-4fad-86b7-00092a0d6589",
           "relationship": "COEXIST",
-          "reason": "Both memories refer to the same entity (payment service) but describe different payment contexts: the existing memory specifies Razorpay for one\u2011time payments, while the new memory specifies Stripe for recurring subscription payments. The distinct predicates and implied scopes indicate that the facts can coexist rather than duplicate or supersede each other."
+          "reason": "Both memories refer to the same entity and property (payment service uses_payment_gateway) but describe different contexts: the existing memory specifies Razorpay for one-time payments, while the new memory specifies Stripe for recurring subscription payments. These represent distinct scopes of the same property and can coexist."
         }
       ],
       "resolution_plan": {
@@ -813,7 +813,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "49936ab8-911e-4b1e-8e37-b8ef1aa9dfc4",
+          "memory_id": "9e7f48cf-2154-4fad-86b7-00092a0d6589",
           "subject": "payment service",
           "predicate": "uses_payment_gateway",
           "object_value": "Razorpay",
@@ -821,11 +821,11 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "bab4b44e-3f38-48ea-8986-5e67523fcb70",
+          "memory_id": "8225e578-3b08-4bf9-a06f-50bdfde7c0a8",
           "subject": "payment service",
-          "predicate": "uses_stripe_for_recurring_subscription_payments",
+          "predicate": "uses_payment_gateway",
           "object_value": "Stripe",
-          "context": null,
+          "context": "recurring subscription payments",
           "status": "ACTIVE"
         }
       ]
@@ -849,9 +849,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "35fd3d62-3007-4b2d-8f5a-aed20c09ee80",
-          "relationship": "UNRELATED",
-          "reason": "The new memory states that the analytics service supports JSON exports, while the existing memory states that it supports CSV exports. These are distinct export formats and represent different capabilities of the same entity, so the memories are unrelated."
+          "memory_id": "16da2907-d80e-4033-b342-57a10502f4a8",
+          "relationship": "COEXIST",
+          "reason": "The new memory states that the analytics service supports JSON exports, while the existing memory states it supports CSV exports. Both facts refer to the same entity and a related capability (export support) but describe different export formats, so they coexist rather than replace or conflict with each other."
         }
       ],
       "resolution_plan": {
@@ -861,7 +861,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "35fd3d62-3007-4b2d-8f5a-aed20c09ee80",
+          "memory_id": "16da2907-d80e-4033-b342-57a10502f4a8",
           "subject": "analytics service",
           "predicate": "supports_csv_exports",
           "object_value": "CSV exports",
@@ -869,7 +869,7 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "ca8bba05-403c-4b47-b5e6-7f07a9671189",
+          "memory_id": "72fb8c93-c954-4e85-882d-8460a8053af1",
           "subject": "analytics service",
           "predicate": "supports_json_exports",
           "object_value": "JSON exports",
@@ -887,7 +887,7 @@
       "input": "The application also supports Hindi as an additional interface language.",
       "extraction": {
         "subject": "application",
-        "predicate": "supports_interface_language",
+        "predicate": "supports_language",
         "object_value": "Hindi",
         "context": null,
         "confidence": 1.0,
@@ -897,9 +897,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "5dacfb5e-b351-4d65-82d6-81371904d7ff",
+          "memory_id": "e11e3460-b6e1-4c95-bd18-c611b441e303",
           "relationship": "COEXIST",
-          "reason": "Both memories refer to the same application and the same property of supported interface languages. The existing memory indicates English as the default interface language, while the new memory indicates Hindi as an additional supported language. Since they describe different supported languages within the same application, they coexist rather than replace each other."
+          "reason": "Both memories refer to the same entity (application) and the same property (supports_language). The existing memory states that English is supported, while the new memory states that Hindi is also supported. The user statement indicates Hindi is an additional interface language, not a replacement for English. Therefore the facts coexist rather than duplicate, supersede, or conflict."
         }
       ],
       "resolution_plan": {
@@ -909,7 +909,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "5dacfb5e-b351-4d65-82d6-81371904d7ff",
+          "memory_id": "e11e3460-b6e1-4c95-bd18-c611b441e303",
           "subject": "application",
           "predicate": "supports_language",
           "object_value": "English",
@@ -917,9 +917,9 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "cb1cb1df-456f-4927-aa42-408d4d9c871d",
+          "memory_id": "6a397943-7979-48f9-9cf7-0ae7cafa3908",
           "subject": "application",
-          "predicate": "supports_interface_language",
+          "predicate": "supports_language",
           "object_value": "Hindi",
           "context": null,
           "status": "ACTIVE"
@@ -945,9 +945,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "8143c821-3a0b-4e25-bdfc-2c19038bb97c",
+          "memory_id": "afbd4f79-c9ec-458f-84e8-f0361cf8d9e5",
           "relationship": "COEXIST",
-          "reason": "The new memory states that the backend uses Python 3.15 in a production environment, while the existing memory indicates that the backend uses Python 3.14 in a development environment. The same entity and property are described, but the contexts differ, allowing both facts to be true simultaneously."
+          "reason": "Both memories refer to the same backend entity and the same property (uses_language). The new memory specifies Python 3.15 in a production environment, while the existing memory specifies Python 3.14 in a development environment. The differing contexts (production vs development) indicate distinct scopes, so the facts can coexist."
         }
       ],
       "resolution_plan": {
@@ -957,7 +957,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "8143c821-3a0b-4e25-bdfc-2c19038bb97c",
+          "memory_id": "afbd4f79-c9ec-458f-84e8-f0361cf8d9e5",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.14",
@@ -965,7 +965,7 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "9cc80513-3a5e-44fb-99f9-a3d3a5af17b7",
+          "memory_id": "fc010ed3-29a5-427b-a029-fc1ad4deba36",
           "subject": "backend",
           "predicate": "uses_language",
           "object_value": "Python 3.15",
@@ -993,9 +993,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "398cb171-a8ea-4257-87cb-3d92ce5d9b8c",
+          "memory_id": "dd4eade5-c93e-4ad2-9d68-47cf0fb92676",
           "relationship": "UNRELATED",
-          "reason": "The new memory describes the analytics service's CSV export capability, while the existing memory describes an API's framework usage. They refer to different entities and properties, so they are unrelated."
+          "reason": "The new memory describes the analytics service supporting CSV exports, while the existing memory describes an API using FastAPI. The subjects, predicates, and object values refer to different entities and properties, with no semantic overlap."
         }
       ],
       "resolution_plan": {
@@ -1005,7 +1005,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "398cb171-a8ea-4257-87cb-3d92ce5d9b8c",
+          "memory_id": "dd4eade5-c93e-4ad2-9d68-47cf0fb92676",
           "subject": "API",
           "predicate": "uses_framework",
           "object_value": "FastAPI",
@@ -1013,7 +1013,7 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "b071e43e-30b6-411c-b5ec-3766dbfc6122",
+          "memory_id": "b8197b1f-fe96-4476-881f-621ddfd95bb9",
           "subject": "analytics service",
           "predicate": "supports_csv_exports",
           "object_value": "CSV exports",
@@ -1041,9 +1041,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "eee198a3-197e-46bd-9a39-cd8f6c67a732",
+          "memory_id": "7794ee7c-2b1a-4422-8634-a215d6755754",
           "relationship": "UNRELATED",
-          "reason": "The new memory refers to a documentation website using Markdown, while the existing memory refers to the Mercury project using Qdrant vector search engine. They involve different entities and properties, so they are unrelated."
+          "reason": "The new memory describes the documentation website using Markdown, whereas the existing memory describes the Mercury project using Qdrant vector search engine. They refer to different entities and properties, so they are unrelated."
         }
       ],
       "resolution_plan": {
@@ -1053,7 +1053,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "eee198a3-197e-46bd-9a39-cd8f6c67a732",
+          "memory_id": "7794ee7c-2b1a-4422-8634-a215d6755754",
           "subject": "Mercury project",
           "predicate": "uses_vector_search_engine",
           "object_value": "Qdrant",
@@ -1061,7 +1061,7 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "970db1ed-85c0-41a9-9e6e-eb18a6828c71",
+          "memory_id": "0b3dbff6-cd44-42ed-9c60-146154dee247",
           "subject": "documentation website",
           "predicate": "uses_language",
           "object_value": "Markdown",
@@ -1079,7 +1079,7 @@
       "input": "The authentication service supports OAuth 2.0.",
       "extraction": {
         "subject": "authentication service",
-        "predicate": "supports_oauth_2_0",
+        "predicate": "supports_oauth",
         "object_value": "OAuth 2.0",
         "context": null,
         "confidence": 1.0,
@@ -1089,9 +1089,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "dac5e221-6525-4031-b7bb-6c4f218dafc6",
+          "memory_id": "4b59cf28-564e-4fc0-a140-9d9e766c8601",
           "relationship": "UNRELATED",
-          "reason": "The new memory describes the authentication service supporting OAuth 2.0, while the existing memory describes the search service using Elasticsearch. The subjects, predicates, and object values refer to different entities and properties, indicating no semantic overlap."
+          "reason": "The new memory describes the authentication service supporting OAuth 2.0, while the existing memory describes the search service using Elasticsearch; they refer to distinct entities and properties."
         }
       ],
       "resolution_plan": {
@@ -1101,7 +1101,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "dac5e221-6525-4031-b7bb-6c4f218dafc6",
+          "memory_id": "4b59cf28-564e-4fc0-a140-9d9e766c8601",
           "subject": "search service",
           "predicate": "uses_indexing_engine",
           "object_value": "Elasticsearch",
@@ -1109,9 +1109,9 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "8c6dfeb0-edc0-4eba-b381-22e55f70d1ac",
+          "memory_id": "4bff4623-04f8-4380-9e5d-833c88ab3cfb",
           "subject": "authentication service",
-          "predicate": "supports_oauth_2_0",
+          "predicate": "supports_oauth",
           "object_value": "OAuth 2.0",
           "context": null,
           "status": "ACTIVE"
@@ -1127,7 +1127,7 @@
       "input": "The deployment pipeline runs automated tests.",
       "extraction": {
         "subject": "deployment pipeline",
-        "predicate": "runs_automated_tests",
+        "predicate": "runs_tests",
         "object_value": "automated tests",
         "context": null,
         "confidence": 1.0,
@@ -1137,9 +1137,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "41a77305-7d7d-41da-88f8-e91108ee376a",
+          "memory_id": "445951e6-7b00-43a6-968a-78eebc146b42",
           "relationship": "UNRELATED",
-          "reason": "The new memory describes the deployment pipeline running automated tests, while the existing memory describes the billing service using Razorpay as a payment gateway. The subjects, predicates, and object values refer to different entities and properties, indicating no semantic overlap."
+          "reason": "The new memory describes the deployment pipeline running automated tests, while the existing memory describes a billing service using Razorpay as a payment gateway. The entities, predicates, and object values are unrelated."
         }
       ],
       "resolution_plan": {
@@ -1149,7 +1149,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "41a77305-7d7d-41da-88f8-e91108ee376a",
+          "memory_id": "445951e6-7b00-43a6-968a-78eebc146b42",
           "subject": "billing service",
           "predicate": "uses_payment_gateway",
           "object_value": "Razorpay",
@@ -1157,9 +1157,9 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "c1c573a7-e284-4ac6-b007-bc44b5eda80e",
+          "memory_id": "3d55a520-9fb6-43c8-be7d-731e03f79dda",
           "subject": "deployment pipeline",
-          "predicate": "runs_automated_tests",
+          "predicate": "runs_tests",
           "object_value": "automated tests",
           "context": null,
           "status": "ACTIVE"
@@ -1175,7 +1175,7 @@
       "input": "The notification service uses Amazon SES for email.",
       "extraction": {
         "subject": "notification service",
-        "predicate": "uses_email_service",
+        "predicate": "uses_email_provider",
         "object_value": "Amazon SES",
         "context": null,
         "confidence": 1.0,
@@ -1185,9 +1185,9 @@
       "retrieved_count": 1,
       "comparisons": [
         {
-          "memory_id": "92535ae8-ffc8-44fa-82d9-068e69d2d13c",
+          "memory_id": "8784b5c5-e35e-494d-a078-a35fa822f377",
           "relationship": "UNRELATED",
-          "reason": "The existing memory describes the frontend using the Vue framework, while the new memory describes the notification service using Amazon SES for email. They refer to different entities and properties, so they are unrelated."
+          "reason": "The existing memory describes the frontend component using the Vue framework, while the new memory describes the notification service using Amazon SES for email. They refer to different entities and properties, so the facts are unrelated."
         }
       ],
       "resolution_plan": {
@@ -1197,7 +1197,7 @@
       },
       "final_database_state": [
         {
-          "memory_id": "92535ae8-ffc8-44fa-82d9-068e69d2d13c",
+          "memory_id": "8784b5c5-e35e-494d-a078-a35fa822f377",
           "subject": "frontend",
           "predicate": "uses_framework",
           "object_value": "Vue",
@@ -1205,9 +1205,9 @@
           "status": "ACTIVE"
         },
         {
-          "memory_id": "f61c7b4b-54be-4f02-8d5b-02bc095f8c7f",
+          "memory_id": "0e98a9a0-696d-49b2-9fef-d81b91dc6f32",
           "subject": "notification service",
-          "predicate": "uses_email_service",
+          "predicate": "uses_email_provider",
           "object_value": "Amazon SES",
           "context": null,
           "status": "ACTIVE"
