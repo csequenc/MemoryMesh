@@ -1,148 +1,119 @@
 # MemoryMesh
 
-**A general-purpose AI memory engine that extracts, stores, retrieves, and resolves information over time.**
+### AI-Powered Persistent Memory System
 
-MemoryMesh turns natural-language inputs into structured memories and maintains a persistent knowledge base. When new information arrives, it uses semantic retrieval and LLM-based comparison to identify relationships with existing memories, then applies deterministic rules to resolve conflicts and preserve history.
+MemoryMesh is an AI-powered memory system designed to store, retrieve, and manage information through natural-language conversations. It combines semantic search, memory resolution, and language models to maintain useful context over time.
 
-## Features
+**Live Demo:** [https://memorymesh-hloe.onrender.com/](https://memorymesh-hloe.onrender.com/)
 
-- **Structured memory extraction** — converts natural-language input into structured facts.
-- **Semantic retrieval** — finds potentially related memories using sentence embeddings.
-- **LLM-based comparison** — evaluates relationships between new and existing information.
-- **Conflict-aware resolution** — distinguishes duplicates, superseded memories, coexistence, conflicts, and unrelated information.
-- **Persistent storage** — stores memories in SQLite using SQLAlchemy.
-- **Knowledge graph** — visualizes stored information and relationships.
-- **Memory management** — inspect, edit, and delete stored memories.
-- **Conversational interface** — ask questions against the current memory database.
-- **Evaluation suite** — tests the system against predefined memory-resolution scenarios.
+**API Documentation:** [https://memorymesh-api-kolz.onrender.com/docs](https://memorymesh-api-kolz.onrender.com/docs)
 
-## Architecture
+**Repository:** [https://github.com/csequenc/MemoryMesh](https://github.com/csequenc/MemoryMesh)
 
-```mermaid
-flowchart TD
-    A[Input] --> B[Extraction]
-    B --> C[Retrieval]
-    C --> D[LLM Comparison]
-    D --> E[Deterministic Resolver]
-    E --> F[(SQLite Database)]
+---
+
+## 🚀 Features
+
+- **Natural Language Memory Ingestion** – Save information through conversational input.
+- **Semantic Search** – Retrieve relevant memories using vector embeddings.
+- **Memory Resolution** – Identify duplicates, conflicts, and superseded information.
+- **Persistent Storage** – Store memories in a structured database.
+- **Knowledge Graph** – Visualize entities and relationships between memories.
+- **Memory Management** – View, update, and delete stored memories.
+- **AI-Powered Responses** – Generate contextual answers using retrieved memories.
+
+## 🛠️ Tech Stack
+
+| Layer           | Technology              |
+| --------------- | ----------------------- |
+| Backend         | Python, FastAPI         |
+| Frontend        | React, TypeScript, Vite |
+| Database        | SQLite, SQLAlchemy      |
+| Embedding Model | all-MiniLM-L6-v2        |
+| Model Runtime   | ONNX Runtime            |
+| LLM Integration | Groq API                |
+| Deployment      | Render                  |
+
+## 🧠 How It Works
+
+MemoryMesh follows a memory ingestion and retrieval pipeline.
+
+```text
+User Input
+    |
+    v
+Memory Ingestion
+    |
+    v
+Memory Processing
+    |
+    v
+Memory Resolution
+    |
+    v
+Database Storage
+    |
+    v
+Semantic Retrieval
+    |
+    v
+LLM Context Generation
+    |
+    v
+AI Response
 ```
 
-## How memory resolution works
+1. **Ingestion:** The user submits information through the chat interface.
+2. **Processing:** The backend processes the input and identifies memory candidates.
+3. **Resolution:** New information is checked against existing memories for duplicates, conflicts, and supersession.
+4. **Storage:** Resolved memories are persisted in the database.
+5. **Retrieval:** Semantic search retrieves relevant active memories for a query.
+6. **Response:** Retrieved memories provide context for the language model to generate a response.
 
-Each memory is represented as a structured record containing:
-
-| Field | Description |
-|---|---|
-| `memory_id` | Unique memory identifier |
-| `subject` | Entity or topic |
-| `predicate` | Relationship or attribute |
-| `object_value` | Stored value |
-| `context` | Context associated with the fact |
-| `confidence` | Extraction confidence |
-| `source_id` | Origin of the information |
-| `status` | Current memory status |
-| `valid_from` | Optional validity start |
-| `valid_to` | Optional validity end |
-| `recorded_at` | Time the memory was recorded |
-
-### Comparison relationships
-
-| Relationship | Meaning |
-|---|---|
-| `DUPLICATE` | The information is already represented |
-| `SUPERSEDE` | New information replaces an existing memory |
-| `COEXIST` | Both memories can remain valid |
-| `CONFLICT` | The information is incompatible or unresolved |
-| `UNRELATED` | The memories do not meaningfully relate |
-
-### Memory statuses
-
-| Status | Meaning |
-|---|---|
-| `ACTIVE` | Current accepted memory |
-| `SUPERSEDED` | Replaced by newer information |
-| `UNRESOLVED` | Contains an unresolved conflict |
-| `REJECTED` | Not accepted into the memory store |
-
-The comparison model judges semantic relationships. A deterministic resolver validates those judgments and determines database changes. The LLM does not directly modify the database.
-
-Memory history is preserved: superseded memories remain stored rather than being permanently overwritten.
-
-## Technology stack
-
-**Backend**
-- Python
-- FastAPI
-- Pydantic
-- SQLAlchemy
-- SQLite
-- Groq API (`openai/gpt-oss-20b`)
-- Sentence Transformers (`all-MiniLM-L6-v2`)
-
-**Frontend**
-- React
-- TypeScript
-- Vite
-- Cytoscape.js
-
-## Project structure
+## 🏗️ Project Structure
 
 ```text
 MemoryMesh/
+│
 ├── app/
 │   ├── api/
-│   │   └── main.py          # FastAPI entry point
 │   ├── database/
-│   ├── graph/
 │   ├── ingestion/
 │   ├── llm/
-│   ├── models/
-│   ├── query/
-│   ├── resolution/
 │   ├── retrieval/
-│   └── main.py              # CLI entry point
-├── dev_tests/
+│   └── resolution/
+│
 ├── frontend/
-├── .gitignore
-├── evaluation.py
-├── evaluation_report.json
-├── inspect_memories.py
-├── migrate_context.py
+│   └── src/
+│
+├── dev_tests/
+│
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-## Getting started
+## ⚙️ Installation & Setup
 
 ### Prerequisites
 
-- Python 3.10+
-- Node.js 20.19+ or 22.12+, and npm
-- A Groq API key
+- Python
+- Node.js and npm
+- Groq API key
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/csequenc/MemoryMesh.git
 cd MemoryMesh
 ```
 
-### 2. Set up the backend
+### 2. Set Up the Backend
 
-On macOS/Linux:
+Install the dependencies:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-On Windows PowerShell:
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Create a `.env` file in the project root:
@@ -151,78 +122,134 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your_groq_api_key
 ```
 
-### 3. Start the backend
+Start the backend:
 
 ```bash
-python -m uvicorn app.api.main:app --reload
+uvicorn app.api.main:app --reload
 ```
 
-The backend will be available at:
+Backend URL:
 
-`http://127.0.0.1:8000`
+```text
+http://127.0.0.1:8000
+```
 
-### 4. Set up the frontend
+Interactive API documentation:
 
-Open another terminal from the project root:
+```text
+http://127.0.0.1:8000/docs
+```
+
+### 3. Set Up the Frontend
+
+Open a new terminal:
 
 ```bash
 cd frontend
-npm ci
+npm install
+```
+
+Create a `.env` file inside the `frontend` directory:
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
+
+Start the frontend:
+
+```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+Open the local URL provided by Vite.
 
-## API overview
+## 🔍 Semantic Retrieval
 
-| Endpoint | Method | Purpose |
-|---|---|---|
-| `/api/chat` | POST | Submit a message or remember information |
-| `/api/graph` | GET | Retrieve knowledge graph data |
-| `/api/graph/node` | DELETE | Delete a graph node and its associated memory |
-| `/api/graph/edge` | DELETE | Delete a graph relationship |
-| `/api/memories` | GET | Retrieve stored memories |
-| `/api/memories/{memory_id}` | PATCH | Update a stored memory |
+MemoryMesh uses the `all-MiniLM-L6-v2` embedding model through ONNX Runtime.
 
-The conversational interface supports the `/remember` command for explicitly adding information. Ordinary messages are treated as questions.
+- Generates semantic embeddings for memory retrieval.
+- Uses ONNX Runtime for CPU-based inference.
+- Loads the model lazily to reduce startup overhead.
+- Uses a pinned model revision for reproducibility.
 
-## Evaluation
+The ONNX implementation avoids the heavier PyTorch-based Sentence Transformers runtime, making deployment more suitable for resource-constrained environments.
 
-The main evaluation suite contains 25 memory-resolution scenarios. The 25 scenarios were written by the project author, so results are not independent of the author's labeling choices.
+## 🗄️ Database Design
 
-**Latest recorded evaluation:**
+MemoryMesh maintains separate databases for personal workflows and the public demo.
 
-- 21 / 25 passed
-- 84% pass rate
-- 4 judgment-sensitive classifications involving ambiguous supersession
-- 0 evaluation errors
+| Database             | Purpose                          |
+| -------------------- | -------------------------------- |
+| `memorymesh.db`      | Personal and local CLI workflows |
+| `memorymesh_demo.db` | Public demo API                  |
 
-The remaining disagreements concern cases where the comparison model interprets new information as replacing an existing fact even though replacement is not unambiguously established.
+The public API uses the demo database exclusively, keeping public demo activity separate from the personal database.
 
-The evaluation is intended to expose the limitations of semantic judgment, not to imply that every ambiguous case has one objectively correct interpretation.
+When the demo database is empty, fictional sample memories are automatically inserted. Existing demo data is not overwritten during subsequent startups.
 
-## Current limitations
+## 🌐 Live Deployment
 
-- Semantic retrieval uses a limited top-k candidate set; relevant memories may be missed.
-- The 25 scenarios were written by the project author, so results are not independent of the author's labeling choices.
-- LLM comparison introduces judgment variability.
-- The current ingestion flow treats inputs as factual information.
-- One input is processed as one intended information unit.
-- Relative dates are not normalized into concrete dates.
-- Historical question answering over superseded memories is not implemented.
-- SQLite is used for local persistence.
-- A Groq API key is required for LLM operations.
+The application is deployed on Render.
 
-## Design philosophy
+| Service           | URL                                                                   |
+| ----------------- | --------------------------------------------------------------------- |
+| Frontend          | [MemoryMesh Live Demo](https://memorymesh-hloe.onrender.com/)         |
+| Backend           | [MemoryMesh API](https://memorymesh-api-kolz.onrender.com/)           |
+| API Documentation | [Interactive API Docs](https://memorymesh-api-kolz.onrender.com/docs) |
 
-MemoryMesh separates three responsibilities:
+### Environment Variables
 
-1. **Understanding:** extract and compare information using language models.
-2. **Decision-making:** validate proposed relationships and determine resolution outcomes.
-3. **Persistence:** apply the resulting changes through a controlled database layer.
+**Backend**
 
-The goal is to build a memory system that can evolve its understanding of information without relying entirely on rigid, predefined rules.
+```env
+GROQ_API_KEY=your_groq_api_key
+FRONTEND_ORIGIN=https://memorymesh-hloe.onrender.com
+```
+
+**Frontend**
+
+```env
+VITE_API_BASE_URL=https://memorymesh-api-kolz.onrender.com
+```
+
+The Groq API key must remain on the backend and must never be exposed in frontend code.
+
+## 🧪 Evaluation
+
+The project includes a scenario-based evaluation suite in `dev_tests/`.
+
+It covers:
+
+- Duplicate detection
+- Conflict handling
+- Supersession
+- Unrelated information
+- Unresolved information
+
+The recorded evaluation report contains **21 passing scenarios out of 25**. These are project-defined test scenarios, not an independent benchmark or a fresh evaluation of every deployed version.
+
+## ⚠️ Demo Notes
+
+- The public demo uses one shared database.
+- Visitors can create, update, and delete demo memories.
+- Changes may be visible to other visitors.
+- The demo does not provide individual visitor accounts or isolated sessions.
+- Demo data may be reset if the hosting platform replaces or resets its filesystem.
+- Do not enter confidential or sensitive information into the public demo.
+
+## 🔮 Future Improvements
+
+Potential areas for further development include:
+
+- Improved retrieval for broad and multi-part queries.
+- More comprehensive automated evaluation.
+- Enhanced memory visualization.
+- Additional memory-management capabilities.
+
+## 👨‍💻 Project
+
+**MemoryMesh** — An exploration of persistent conversational memory, semantic retrieval, and intelligent memory resolution.
 
 ---
 
-*MemoryMesh is an experimental project exploring persistent, conflict-aware AI memory.*
+\<p align="center">   \<strong>Building AI systems that remember.\</strong> \</p>
