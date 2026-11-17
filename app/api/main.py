@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from datetime import datetime
+import logging
+from groq import APIError
 from pydantic import BaseModel, Field, ConfigDict, field_validator
 from app.database.connection import SessionLocal
 from app.database.memory_repository import (
@@ -17,6 +19,24 @@ from app.models.memory import MemoryStatus
 from app.retrieval.semantic_search import retrieve_for_query
 from app.query.answer import generate_answer
 from app.ingestion.memory_pipeline import process_user_input
+
+
+logger = logging.getLogger(__name__)
+
+
+def run_ai_operation(operation, *args, **kwargs):
+    """Run an AI-backed operation and expose a safe API error to clients."""
+    try:
+        return operation(*args, **kwargs)
+    except (ValueError, APIError) as error:
+        logger.exception("AI operation failed")
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "The AI service could not process this request. "
+                "Please try again in a moment."
+            )
+        ) from error
 
 
 app = FastAPI(
@@ -250,7 +270,8 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
                 detail="Please provide information after /remember."
             )
 
-        result = process_user_input(
+        result = run_ai_operation(
+            process_user_input,
             db=db,
             user_input=memory_input
         )
@@ -370,7 +391,8 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)):
         memory for memory, score in retrieved
     ]
 
-    result = generate_answer(
+    result = run_ai_operation(
+        generate_answer,
         query=message,
         retrieved_memories=retrieved_memories
     )

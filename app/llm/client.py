@@ -1,3 +1,4 @@
+
 import os
 import time
 import threading
@@ -14,9 +15,15 @@ if not api_key:
     raise ValueError("GROQ_API_KEY not found in .env file")
 
 
+# Configurable LLM settings.
+LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-oss-20b")
+LLM_TIMEOUT_SECONDS = float(os.getenv("LLM_TIMEOUT_SECONDS", "30"))
+
+
 # Groq SDK handles retries for retryable API errors.
 groq_client = Groq(
     api_key=api_key,
+    timeout=LLM_TIMEOUT_SECONDS,
     max_retries=3
 )
 
