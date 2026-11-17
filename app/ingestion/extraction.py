@@ -294,12 +294,48 @@ facts from it only.
                 model=LLM_MODEL,
                 messages=messages,
                 response_format={
-                    "type": "json_schema",
-                    "json_schema": {
-                        "name": "memory_extraction",
-                        "schema": MemoryExtraction.model_json_schema()
-                    }
+    "type": "json_schema",
+    "json_schema": {
+        "name": "memory_extraction",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "subject": {
+                    "type": "string"
                 },
+                "predicate": {
+                    "type": "string"
+                },
+                "object_value": {
+                    "type": "string"
+                },
+                "context": {
+                    "type": ["string", "null"]
+                },
+                "confidence": {
+                    "type": "number"
+                },
+                "valid_from": {
+                    "type": ["string", "null"]
+                },
+                "valid_to": {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": [
+                "subject",
+                "predicate",
+                "object_value",
+                "context",
+                "confidence",
+                "valid_from",
+                "valid_to"
+            ],
+            "additionalProperties": False
+        }
+    }
+},
                 temperature=0
             )
 

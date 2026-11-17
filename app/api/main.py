@@ -1,12 +1,21 @@
+
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import (
+    BaseModel,
+    Field,
+    ConfigDict,
+    field_validator,
+)
 from sqlalchemy.orm import Session
 from datetime import datetime
 import logging
 from groq import APIError
-from pydantic import BaseModel, Field, ConfigDict, field_validator
-from app.database.connection import SessionLocal
+
+from app.database.demo_connection import (
+    get_demo_db as get_db,
+    create_demo_tables,
+)
 from app.database.memory_repository import (
     list_memories,
     get_all_candidate_memories,
@@ -45,6 +54,12 @@ app = FastAPI(
     version="0.1.0"
 )
 
+
+@app.on_event("startup")
+def initialize_demo_database():
+    create_demo_tables()
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -60,10 +75,12 @@ class ChatRequest(BaseModel):
 
 class DeleteNodeRequest(BaseModel):
     node_id: str = Field(min_length=1)
-    
+
+
 class DeleteEdgeRequest(BaseModel):
     memory_id: str = Field(min_length=1)
-    
+
+
 class MemoryUpdateRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -81,15 +98,6 @@ class MemoryUpdateRequest(BaseModel):
             raise ValueError("This field cannot be empty.")
 
         return value.strip() if value is not None else value
-
-
-def get_db():
-    db = SessionLocal()
-
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 def serialize_memory(memory):
@@ -120,6 +128,7 @@ def get_graph(db: Session = Depends(get_db)):
     graph = build_graph_data(memories)
 
     return graph
+
 
 @app.get("/api/memories")
 def get_all_memories(db: Session = Depends(get_db)):
@@ -191,6 +200,7 @@ def edit_memory(
     except ValueError as error:
         raise HTTPException(status_code=400, detail=str(error))
 
+
 @app.delete("/api/graph/node")
 def delete_graph_node(
     request: DeleteNodeRequest,
@@ -219,7 +229,8 @@ def delete_graph_node(
             status_code=400,
             detail=str(error)
         )
-        
+
+
 @app.delete("/api/graph/edge")
 def delete_graph_edge(
     request: DeleteEdgeRequest,
