@@ -1,0 +1,864 @@
+{
+  "evaluation": "object_similarity",
+  "total": 15,
+  "passed": 10,
+  "failed": 5,
+  "errors": 0,
+  "category_summary": {
+    "contextual_coexistence": {
+      "total": 3,
+      "passed": 2,
+      "failed": 1
+    },
+    "explicit_replacement": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "object_equivalence": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "related_but_distinct": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "similar_but_distinct": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4
+    }
+  },
+  "results": [
+    {
+      "id": "OS01",
+      "category": "object_equivalence",
+      "expected": "DUPLICATE",
+      "actual": "DUPLICATE",
+      "passed": true,
+      "seed": {
+        "subject": "database",
+        "predicate": "uses_database",
+        "object_value": "PostgreSQL",
+        "context": "MemoryMesh production backend"
+      },
+      "input": "The production backend of MemoryMesh uses Postgres as its database.",
+      "seed_memory_id": "936de7a1-6c56-4313-b41e-cf62fa62f850",
+      "extraction": {
+        "subject": "production backend",
+        "predicate": "uses_database",
+        "object_value": "Postgres",
+        "context": "MemoryMesh project, production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "936de7a1-6c56-4313-b41e-cf62fa62f850",
+          "relationship": "DUPLICATE",
+          "reason": "Both memories describe that the MemoryMesh production backend uses Postgres/PostgreSQL as its database; the subject names differ but the context indicates the same entity and property, and the object values are synonyms."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": false,
+        "candidate_status": null,
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "936de7a1-6c56-4313-b41e-cf62fa62f850",
+          "subject": "database",
+          "predicate": "uses_database",
+          "object_value": "PostgreSQL",
+          "context": "MemoryMesh production backend",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS02",
+      "category": "object_equivalence",
+      "expected": "DUPLICATE",
+      "actual": "DUPLICATE",
+      "passed": true,
+      "seed": {
+        "subject": "frontend",
+        "predicate": "uses_framework",
+        "object_value": "React",
+        "context": "Phoenix application"
+      },
+      "input": "The Phoenix frontend is built with React.js.",
+      "seed_memory_id": "a069e843-4335-4fca-bbda-a0be40984cab",
+      "extraction": {
+        "subject": "frontend",
+        "predicate": "uses_framework",
+        "object_value": "React.js",
+        "context": "Phoenix application",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "a069e843-4335-4fca-bbda-a0be40984cab",
+          "relationship": "DUPLICATE",
+          "reason": "Both memories describe the frontend of the Phoenix application using the same framework, with only a naming variation (React vs React.js)."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": false,
+        "candidate_status": null,
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "a069e843-4335-4fca-bbda-a0be40984cab",
+          "subject": "frontend",
+          "predicate": "uses_framework",
+          "object_value": "React",
+          "context": "Phoenix application",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS03",
+      "category": "object_equivalence",
+      "expected": "DUPLICATE",
+      "actual": "DUPLICATE",
+      "passed": true,
+      "seed": {
+        "subject": "vector database",
+        "predicate": "uses_vector_engine",
+        "object_value": "Qdrant",
+        "context": "Mercury project"
+      },
+      "input": "Mercury uses the Qdrant vector database.",
+      "seed_memory_id": "ad4fb650-248b-4423-999c-81a4e0573902",
+      "extraction": {
+        "subject": "Mercury",
+        "predicate": "uses_vector_engine",
+        "object_value": "Qdrant",
+        "context": null,
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "ad4fb650-248b-4423-999c-81a4e0573902",
+          "relationship": "DUPLICATE",
+          "reason": "Both memories state that Mercury uses the Qdrant vector database; the new memory repeats the same fact with different subject representation."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": false,
+        "candidate_status": null,
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "ad4fb650-248b-4423-999c-81a4e0573902",
+          "subject": "vector database",
+          "predicate": "uses_vector_engine",
+          "object_value": "Qdrant",
+          "context": "Mercury project",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS04",
+      "category": "similar_but_distinct",
+      "expected": "UNRESOLVED",
+      "actual": "SUPERSEDE",
+      "passed": false,
+      "seed": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.12",
+        "context": "MemoryMesh production backend"
+      },
+      "input": "The MemoryMesh production backend uses Python 3.13.",
+      "seed_memory_id": "d2e8c513-8497-48eb-9b1e-7295ba6f0d58",
+      "extraction": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.13",
+        "context": "MemoryMesh production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "d2e8c513-8497-48eb-9b1e-7295ba6f0d58",
+          "relationship": "SUPERSEDE",
+          "reason": "Both memories refer to the same backend in the MemoryMesh production environment and describe the same property (uses_language). The new memory states Python 3.13 while the existing memory states Python 3.12, and the original user statement confirms the current use of Python 3.13. Therefore the new memory supersedes the old one."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "d2e8c513-8497-48eb-9b1e-7295ba6f0d58",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "d2e8c513-8497-48eb-9b1e-7295ba6f0d58",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.12",
+          "context": "MemoryMesh production backend",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "c0d2c770-8343-4c8f-b3b7-7040630bd80c",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.13",
+          "context": "MemoryMesh production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS05",
+      "category": "similar_but_distinct",
+      "expected": "UNRESOLVED",
+      "actual": "SUPERSEDE",
+      "passed": false,
+      "seed": {
+        "subject": "API",
+        "predicate": "uses_framework",
+        "object_value": "FastAPI",
+        "context": "MemoryMesh production API"
+      },
+      "input": "The MemoryMesh production API uses Django.",
+      "seed_memory_id": "26d60b04-590f-49b7-9026-f55a841e19a9",
+      "extraction": {
+        "subject": "API",
+        "predicate": "uses_framework",
+        "object_value": "Django",
+        "context": "MemoryMesh production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "26d60b04-590f-49b7-9026-f55a841e19a9",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that the MemoryMesh production API uses Django, which replaces the earlier fact that it used FastAPI. The subject, predicate, and context match, indicating a change in the framework used for the same entity."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "26d60b04-590f-49b7-9026-f55a841e19a9",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "26d60b04-590f-49b7-9026-f55a841e19a9",
+          "subject": "API",
+          "predicate": "uses_framework",
+          "object_value": "FastAPI",
+          "context": "MemoryMesh production API",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "0371d113-8cf3-4511-ba52-736913c77451",
+          "subject": "API",
+          "predicate": "uses_framework",
+          "object_value": "Django",
+          "context": "MemoryMesh production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS06",
+      "category": "similar_but_distinct",
+      "expected": "UNRESOLVED",
+      "actual": "SUPERSEDE",
+      "passed": false,
+      "seed": {
+        "subject": "search service",
+        "predicate": "uses_search_engine",
+        "object_value": "Elasticsearch",
+        "context": "production search service"
+      },
+      "input": "The production search service uses OpenSearch.",
+      "seed_memory_id": "db400484-7f36-4f18-922d-5269ae44d39c",
+      "extraction": {
+        "subject": "search service",
+        "predicate": "uses_search_engine",
+        "object_value": "OpenSearch",
+        "context": "production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "db400484-7f36-4f18-922d-5269ae44d39c",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that the production search service uses OpenSearch, which replaces the previously recorded use of Elasticsearch for the same entity and property, as confirmed by the original user statement."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "db400484-7f36-4f18-922d-5269ae44d39c",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "db400484-7f36-4f18-922d-5269ae44d39c",
+          "subject": "search service",
+          "predicate": "uses_search_engine",
+          "object_value": "Elasticsearch",
+          "context": "production search service",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "1084b4ec-84da-4853-8b9d-43e6e2674b1f",
+          "subject": "search service",
+          "predicate": "uses_search_engine",
+          "object_value": "OpenSearch",
+          "context": "production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS07",
+      "category": "similar_but_distinct",
+      "expected": "UNRESOLVED",
+      "actual": "SUPERSEDE",
+      "passed": false,
+      "seed": {
+        "subject": "vector search service",
+        "predicate": "uses_vector_engine",
+        "object_value": "Qdrant",
+        "context": "Mercury production environment"
+      },
+      "input": "Mercury's production vector search service uses Weaviate.",
+      "seed_memory_id": "3ddda166-5c56-4f58-897d-6231ff41ac01",
+      "extraction": {
+        "subject": "vector search service",
+        "predicate": "uses_vector_engine",
+        "object_value": "Weaviate",
+        "context": "Mercury production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "3ddda166-5c56-4f58-897d-6231ff41ac01",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that Mercury's production vector search service uses Weaviate, which replaces the previous record that it used Qdrant in the same environment."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "3ddda166-5c56-4f58-897d-6231ff41ac01",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "3ddda166-5c56-4f58-897d-6231ff41ac01",
+          "subject": "vector search service",
+          "predicate": "uses_vector_engine",
+          "object_value": "Qdrant",
+          "context": "Mercury production environment",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "e02c3239-487e-49fa-9d44-a913d4499efa",
+          "subject": "vector search service",
+          "predicate": "uses_vector_engine",
+          "object_value": "Weaviate",
+          "context": "Mercury production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS08",
+      "category": "explicit_replacement",
+      "expected": "SUPERSEDE",
+      "actual": "SUPERSEDE",
+      "passed": true,
+      "seed": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.12",
+        "context": "MemoryMesh production backend"
+      },
+      "input": "We upgraded the MemoryMesh production backend from Python 3.12 to Python 3.13.",
+      "seed_memory_id": "58cb86df-1e77-48f5-82a7-3dba0b24fbb8",
+      "extraction": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.13",
+        "context": "MemoryMesh production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "58cb86df-1e77-48f5-82a7-3dba0b24fbb8",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that the backend now uses Python 3.13 in the MemoryMesh production environment, while the existing memory records Python 3.12 for the same backend. The original user statement explicitly mentions an upgrade from 3.12 to 3.13, indicating that the new value replaces the old one."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "58cb86df-1e77-48f5-82a7-3dba0b24fbb8",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "58cb86df-1e77-48f5-82a7-3dba0b24fbb8",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.12",
+          "context": "MemoryMesh production backend",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "dd1f0aa8-31a2-4a4e-ac16-b5535d917bfd",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.13",
+          "context": "MemoryMesh production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS09",
+      "category": "explicit_replacement",
+      "expected": "SUPERSEDE",
+      "actual": "SUPERSEDE",
+      "passed": true,
+      "seed": {
+        "subject": "API",
+        "predicate": "uses_framework",
+        "object_value": "FastAPI",
+        "context": "MemoryMesh production API"
+      },
+      "input": "We replaced FastAPI with Django for the MemoryMesh production API.",
+      "seed_memory_id": "55a9dfde-79d9-49aa-ae6e-dbc45fd0938e",
+      "extraction": {
+        "subject": "API",
+        "predicate": "uses_framework",
+        "object_value": "Django",
+        "context": "MemoryMesh project, production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "55a9dfde-79d9-49aa-ae6e-dbc45fd0938e",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that FastAPI was replaced by Django for the MemoryMesh production API, directly superseding the existing memory that recorded FastAPI as the framework for the same API."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "55a9dfde-79d9-49aa-ae6e-dbc45fd0938e",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "55a9dfde-79d9-49aa-ae6e-dbc45fd0938e",
+          "subject": "API",
+          "predicate": "uses_framework",
+          "object_value": "FastAPI",
+          "context": "MemoryMesh production API",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "ef61176c-03e9-44a9-becd-790b31838cfd",
+          "subject": "API",
+          "predicate": "uses_framework",
+          "object_value": "Django",
+          "context": "MemoryMesh project, production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS10",
+      "category": "explicit_replacement",
+      "expected": "SUPERSEDE",
+      "actual": "SUPERSEDE",
+      "passed": true,
+      "seed": {
+        "subject": "search service",
+        "predicate": "uses_search_engine",
+        "object_value": "Elasticsearch",
+        "context": "production search service"
+      },
+      "input": "The production search service has migrated from Elasticsearch to OpenSearch.",
+      "seed_memory_id": "58dd97dd-db63-43d2-80bf-3f85e632ecb5",
+      "extraction": {
+        "subject": "search service",
+        "predicate": "uses_search_engine",
+        "object_value": "OpenSearch",
+        "context": "production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "58dd97dd-db63-43d2-80bf-3f85e632ecb5",
+          "relationship": "SUPERSEDE",
+          "reason": "The new memory states that the production search service now uses OpenSearch, and the original user statement explicitly says it migrated from Elasticsearch to OpenSearch, indicating the old value was replaced."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": [
+          {
+            "memory_id": "58dd97dd-db63-43d2-80bf-3f85e632ecb5",
+            "status": "SUPERSEDED"
+          }
+        ]
+      },
+      "final_database_state": [
+        {
+          "memory_id": "58dd97dd-db63-43d2-80bf-3f85e632ecb5",
+          "subject": "search service",
+          "predicate": "uses_search_engine",
+          "object_value": "Elasticsearch",
+          "context": "production search service",
+          "status": "SUPERSEDED"
+        },
+        {
+          "memory_id": "01934ba5-32da-4a62-aa82-95337e9972c3",
+          "subject": "search service",
+          "predicate": "uses_search_engine",
+          "object_value": "OpenSearch",
+          "context": "production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS11",
+      "category": "contextual_coexistence",
+      "expected": "ADD",
+      "actual": "ADD",
+      "passed": true,
+      "seed": {
+        "subject": "payment service",
+        "predicate": "uses_payment_gateway",
+        "object_value": "Stripe",
+        "context": "one-time payments"
+      },
+      "input": "The payment service also uses Stripe for recurring subscription payments.",
+      "seed_memory_id": "bff5d3c9-c104-458a-bd07-590b6805e9ff",
+      "extraction": {
+        "subject": "payment service",
+        "predicate": "uses_payment_gateway",
+        "object_value": "Stripe",
+        "context": "recurring subscription payments",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "bff5d3c9-c104-458a-bd07-590b6805e9ff",
+          "relationship": "COEXIST",
+          "reason": "Same entity and property but different contexts (one-time vs recurring subscription)"
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "bff5d3c9-c104-458a-bd07-590b6805e9ff",
+          "subject": "payment service",
+          "predicate": "uses_payment_gateway",
+          "object_value": "Stripe",
+          "context": "one-time payments",
+          "status": "ACTIVE"
+        },
+        {
+          "memory_id": "0a59dabd-a895-44ce-a1da-c998cf1954dc",
+          "subject": "payment service",
+          "predicate": "uses_payment_gateway",
+          "object_value": "Stripe",
+          "context": "recurring subscription payments",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS12",
+      "category": "contextual_coexistence",
+      "expected": "ADD",
+      "actual": "ADD",
+      "passed": true,
+      "seed": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.12",
+        "context": "development environment"
+      },
+      "input": "The backend uses Python 3.13 in the production environment.",
+      "seed_memory_id": "a325c4b3-90a3-44ea-83ac-8af79ec74289",
+      "extraction": {
+        "subject": "backend",
+        "predicate": "uses_language",
+        "object_value": "Python 3.13",
+        "context": "production environment",
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "a325c4b3-90a3-44ea-83ac-8af79ec74289",
+          "relationship": "COEXIST",
+          "reason": "Both memories refer to the backend\u2019s programming language usage but in different environments; the existing memory states Python 3.12 in the development environment, while the new memory states Python 3.13 in the production environment, so the facts coexist."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "a325c4b3-90a3-44ea-83ac-8af79ec74289",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.12",
+          "context": "development environment",
+          "status": "ACTIVE"
+        },
+        {
+          "memory_id": "f913748a-7fca-4000-9e83-619769f0260a",
+          "subject": "backend",
+          "predicate": "uses_language",
+          "object_value": "Python 3.13",
+          "context": "production environment",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS13",
+      "category": "contextual_coexistence",
+      "expected": "ADD",
+      "actual": "DUPLICATE",
+      "passed": false,
+      "seed": {
+        "subject": "cache service",
+        "predicate": "uses_technology",
+        "object_value": "Redis",
+        "context": "caching"
+      },
+      "input": "The cache service also uses Redis as a message queue.",
+      "seed_memory_id": "37eabf98-39f6-4403-a66c-f79ec97db77f",
+      "extraction": {
+        "subject": "cache service",
+        "predicate": "uses_technology",
+        "object_value": "Redis",
+        "context": null,
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "37eabf98-39f6-4403-a66c-f79ec97db77f",
+          "relationship": "DUPLICATE",
+          "reason": "Both memories state that the cache service uses Redis; the new memory lacks context but otherwise matches the existing memory, so they are duplicates."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": false,
+        "candidate_status": null,
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "37eabf98-39f6-4403-a66c-f79ec97db77f",
+          "subject": "cache service",
+          "predicate": "uses_technology",
+          "object_value": "Redis",
+          "context": "caching",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS14",
+      "category": "related_but_distinct",
+      "expected": "ADD",
+      "actual": "ADD",
+      "passed": true,
+      "seed": {
+        "subject": "analytics service",
+        "predicate": "exports_format",
+        "object_value": "CSV",
+        "context": "analytics export functionality"
+      },
+      "input": "The analytics service also exports reports in JSON format.",
+      "seed_memory_id": "1464f8b0-8e8d-4326-acc1-832d48528413",
+      "extraction": {
+        "subject": "analytics service",
+        "predicate": "exports_format",
+        "object_value": "JSON",
+        "context": null,
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "1464f8b0-8e8d-4326-acc1-832d48528413",
+          "relationship": "COEXIST",
+          "reason": "Both memories refer to the same analytics service and the same property 'exports_format', but the new memory states that the service also exports reports in JSON format, indicating an additional format rather than replacing the existing CSV export. Therefore the facts coexist."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "1464f8b0-8e8d-4326-acc1-832d48528413",
+          "subject": "analytics service",
+          "predicate": "exports_format",
+          "object_value": "CSV",
+          "context": "analytics export functionality",
+          "status": "ACTIVE"
+        },
+        {
+          "memory_id": "6b5db0a1-7992-4dab-9c7d-8997f17cd8d2",
+          "subject": "analytics service",
+          "predicate": "exports_format",
+          "object_value": "JSON",
+          "context": null,
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "OS15",
+      "category": "related_but_distinct",
+      "expected": "ADD",
+      "actual": "ADD",
+      "passed": true,
+      "seed": {
+        "subject": "application",
+        "predicate": "supports_language",
+        "object_value": "English",
+        "context": "default interface language"
+      },
+      "input": "The application additionally supports Hindi as an interface language.",
+      "seed_memory_id": "ff40dc16-83d8-4cde-8a48-5aeb7ae947e9",
+      "extraction": {
+        "subject": "application",
+        "predicate": "supports_language",
+        "object_value": "Hindi",
+        "context": null,
+        "confidence": 1.0,
+        "valid_from": null,
+        "valid_to": null
+      },
+      "retrieved_count": 1,
+      "comparisons": [
+        {
+          "memory_id": "ff40dc16-83d8-4cde-8a48-5aeb7ae947e9",
+          "relationship": "COEXIST",
+          "reason": "Both memories refer to the same application and the same property supports_language but list different languages; they can coexist."
+        }
+      ],
+      "resolution_plan": {
+        "should_insert": true,
+        "candidate_status": "ACTIVE",
+        "updates": []
+      },
+      "final_database_state": [
+        {
+          "memory_id": "ff40dc16-83d8-4cde-8a48-5aeb7ae947e9",
+          "subject": "application",
+          "predicate": "supports_language",
+          "object_value": "English",
+          "context": "default interface language",
+          "status": "ACTIVE"
+        },
+        {
+          "memory_id": "69994c20-7466-46da-a0fd-278aef95a413",
+          "subject": "application",
+          "predicate": "supports_language",
+          "object_value": "Hindi",
+          "context": null,
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ]
+}
