@@ -9,3 +9,17 @@
 .env
 .env.*
 !.env.example
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
