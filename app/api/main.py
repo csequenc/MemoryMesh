@@ -1,4 +1,4 @@
-
+import os
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import (
@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 import logging
 from groq import APIError
-
+from app.database.demo_seed import seed_demo_data
 from app.database.demo_connection import (
     get_demo_db as get_db,
     create_demo_tables,
@@ -58,11 +58,23 @@ app = FastAPI(
 @app.on_event("startup")
 def initialize_demo_database():
     create_demo_tables()
+    seeded_count = seed_demo_data()
+    print(f"Demo database initialized. Seeded {seeded_count} memories.")
 
+
+frontend_origin = os.getenv("FRONTEND_ORIGIN", "").strip().rstrip("/")
+
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+if frontend_origin:
+    allowed_origins.append(frontend_origin)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

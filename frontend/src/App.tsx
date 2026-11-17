@@ -113,6 +113,9 @@ const graphLayout = {
   minTemp: 1,
 }
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'
+
 function App() {
   const graphRef = useRef<HTMLDivElement>(null)
   const cyRef = useRef<Core | null>(null)
@@ -149,7 +152,7 @@ function App() {
 
   // Fetch graph data.
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/graph')
+    fetch(`${API_BASE_URL}/api/graph`)
       .then((response) => {
         if (!response.ok) throw new Error('Could not load graph')
         return response.json()
@@ -470,7 +473,7 @@ function App() {
   // Refresh graph after a memory has been added, updated, or deleted.
   async function refreshGraph(): Promise<boolean> {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/graph')
+      const response = await fetch(`${API_BASE_URL}/api/graph`)
 
       if (!response.ok) {
         throw new Error('Could not refresh graph')
@@ -493,7 +496,7 @@ function App() {
   async function refreshMemories(): Promise<boolean> {
     setDatabaseLoading(true)
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/memories')
+      const response = await fetch(`${API_BASE_URL}/api/memories`)
       if (!response.ok) throw new Error('Could not load memory records.')
       const data: MemoryRecord[] = await response.json()
       setMemories(data)
@@ -560,7 +563,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/memories/${memoryId}`,
+        `${API_BASE_URL}/api/memories/${memoryId}`,
         {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
@@ -626,7 +629,7 @@ function App() {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/graph/node',
+        `${API_BASE_URL}/api/graph/node`,
         {
           method: 'DELETE',
           headers: {
@@ -690,7 +693,7 @@ function App() {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/graph/edge',
+        `${API_BASE_URL}/api/graph/edge`,
         {
           method: 'DELETE',
           headers: {
@@ -749,7 +752,7 @@ function App() {
     setChatLoading(true)
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/chat', {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: question }),
